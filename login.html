@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WeCare</title>
+
+        <link rel="stylesheet" href="login.css">
+    </head>
+    
+    <body>
+        <section class="login">
+            <div class="login_box">
+                <div class="left">
+                    <div class="top_link"><a href="#">
+                        <img src="left.PNG" alt="">Return home</a>
+                    </div>
+
+                    <div class="contact">
+                        <form action="">
+                            <h3>LOG IN</h3>
+                            <input type="text" placeholder="USERNAME">
+                            <input type="password" placeholder="PASSWORD" value="" id="myInput">
+                            
+
+                            <div class="visibility_container">
+                                <label for="one">
+                                    <input type="checkbox" name="x" value="y" id="y" onclick="myFunction()">
+                                    Show Password
+                                    </label>
+
+                                <script>
+                                function myFunction() {
+                                    var x = document.getElementById("myInput");
+                                    if (x.type === "password") {
+                                        x.type = "text";
+                                    } else {
+                                        x.type = "password";
+                                    }
+                                }
+                                </script>
+                            </div>
+
+                            <button class="submit">LOG IN</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="right-text">
+                        <h2>WeCare</h2>
+                        <h5>Your health comes first, because we care about you</h5>
+                    </div>
+                    <div class="right-inductor"><img src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
+
+ 
