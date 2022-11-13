@@ -9,7 +9,7 @@ img{
 .login {
     height: 1000px;
     width: 100%;
-    background: radial-gradient(#528ee1, #0f5fce), url(geometric.png);
+    background: radial-gradient(#528ee1, #0f5fce);
     position: relative;
     /*position:relative*/
 }
