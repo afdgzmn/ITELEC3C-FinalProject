@@ -40,6 +40,14 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+  .field-icon {
+    float: right;
+    margin-left: -30px;
+    margin-top: -30px;
+    margin-right: 20px;
+    position: relative;
+    z-index: 2;
+  }
   .right {
 
     position: absolute;
