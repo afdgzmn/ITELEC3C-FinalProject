@@ -52,7 +52,7 @@
                 </div>
 
               </div>
-              <form action="register.php" class="signin-form" method="post">
+              <form action="register.php" class="signin-form">
                 <div class="form-group mb-3">
                   <?php if (isset($_GET['error'])) { ?>
                   <p class="error">
@@ -88,11 +88,11 @@
                   <?php } else { ?>
                   <input type="text" required name="email" class="form-control" placeholder="Email">
                   <?php } ?>
-                </div>
-                <div class="form-group mb-3">
+
+
                   <label class="label" for="name">Password</label>
-                  <input type="password" required class="form-control" placeholder="Password" name="password"
-                    autocomplete="current-password" id="id_password">
+                  <input type="password" class="form-control" placeholder="Password" name="password"
+                    autocomplete="current-password" required="" id="id_password">
                   <i class="fa fa-eye field-icon" id="togglePassword" style="cursor: pointer;"></i>
 
                   <script>
@@ -109,8 +109,8 @@
                   </script>
 
                   <label class="label" for="name">Confirm Password</label>
-                  <input type="password" required class="form-control" placeholder="Confirm Password"
-                    name="confirm_password" autocomplete="current-password" id="id_confirmpassword">
+                  <input type="password" class="form-control" placeholder="Confirm Password" name="password"
+                    autocomplete="current-password" required="" id="id_confirmpassword">
                   <i class="fa fa-eye field-icon" id="toggleConfirmPassword" style="cursor: pointer;"></i>
 
                   <script>
@@ -127,18 +127,19 @@
                   </script>
 
                   <a href="#">Forgot Password?</a>
-                  <!--<label class="label" for="password">Password</label>
-		              <input type="password" class="form-control" placeholder="Password" id="myInput" required>
+                </div>
+                <!--<label class="label" for="password">Password</label>
+		              	<input type="password" class="form-control" placeholder="Password" id="myInput" required>
 
-                      <label class="label" for="password">Confirm Password</label>
-		              <input type="password" class="form-control" placeholder="Re-type Password" id="myInput" required>
-		            </div>
+                      	<label class="label" for="password">Confirm Password</label>
+		              	<input type="password" class="form-control" placeholder="Re-type Password" id="myInput" required>
+		            	</div>
 		            
-					<div class="form-group d-md-flex">
-		            	<div class="w-50 text-left">
-			            	<label class="checkbox-wrap checkbox-primary mb-0">Show Password
-									  <input type="checkbox" name="x" value="y" id="y" onclick="myFunction()">
-									  <span class="checkmark"></span>
+						<div class="form-group d-md-flex">
+		            		<div class="w-50 text-left">
+			            		<label class="checkbox-wrap checkbox-primary mb-0">Show Password
+									<input type="checkbox" name="x" value="y" id="y" onclick="myFunction()">
+									<span class="checkmark"></span>
 							</label>
 
 							<script>
@@ -158,7 +159,7 @@
 									<div class="w-50 text-md-right">
 										<a href="#">Forgot Password?</a>
 									</div>-->
-                </div>
+
 
                 <div class="form-group">
                   <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign Up</button>
