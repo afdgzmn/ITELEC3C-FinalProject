@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>WeCare - Our Doctors</title>
+    <title>WeCare - Consult Now</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -31,6 +31,8 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
 <body>
     <!-- Spinner Start -->
@@ -74,8 +76,8 @@
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>WeCare</h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -83,11 +85,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="team.html" class="nav-item nav-link active">Our Doctors</a>
-                <a href="about.html" class="nav-item nav-link">About Us</a>
-                <a href="service.html" class="nav-item nav-link">Our Services</a>
-                <a href="consult.html" class="nav-item nav-link">Consult Now</a>
+                <a href="index.php" class="nav-item nav-link">Home</a>
+                <a href="doctor-allergology.php" class="nav-item nav-link">Our Doctors</a>
+                <a href="about.php" class="nav-item nav-link">About Us</a>
+                <a href="service.php" class="nav-item nav-link">Our Services</a>
+                <a href="myappointments.php" class="nav-item nav-link">My Appointments</a>
+                <a href="consult.php" class="nav-item nav-link">Consult Now</a>
                 <!--
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -102,15 +105,15 @@
                 
                 <a href="contact.html" class="nav-item nav-link">Contact</a>-->
             </div>
-            <a href="signin.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">LOG IN<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="signin.php" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">LOG IN<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
     
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow">
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3">Doctors</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Appointment</h1>
             <!--<nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb text-uppercase mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
@@ -122,137 +125,98 @@
     </div>
     <!-- Page Header End -->    
 
-    <!-- Header Start -->
-    
-    
-    <div class="wrapper">
-        <p class="span12">
-            <a href="#menu" class="side-menu-link btn btn-mini" title="Click for sub-menu">
-              <i class="icon-th"></i>
-            </a>
-          </p>
-        <div class="sidebar">
-            <h3 style="padding:30px 20px 20px 20px; text-align: center;">Specialization</h3>
-            <a href="doctor-allergology.html">Allergology</a>
-            <a class="active" href="doctor-dermatology.html">Dermatology</a>
-            <a href="doctor-gastroenterology.html">Gastroenterology</a>
-            <a href="doctor-neurology.html">Neurology</a>
-            <a href="doctor-opthalmology.html">Opthalmology</a>
-        </div>
-        
-        <!--Allergology Start-->
-        <div style="display:absolute; margin-right:100px; width:65%;">
+    <!-- Appointment Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <!--<p class="d-inline-block border rounded-pill py-1 px-4">Services</p>-->
+                <h1>Make An Appointment</h1>
+                <p class="display-7 mb-2">Please input the following details required to proceed with your appointment.</p>
+                <p class="display-7 mb-5">Rest assured that all data and informatin provided will be put into confidential use only.</p>
             
-            <!--Doctor-1 Start-->
-            <div class="content bg-light">
-                <h3>Tamayo, Ma. Carmela Abad</h3>
-                <hr>
-                <div class="row g-5">
-                    <div class="col-lg-6 wowp">
-                        <p>PRIMARY SPECIALTY</p>
-                        <h5>Internal Medicine</h5>
-                    </div>
-                    <div class="col-lg-6 wow">
-                        <p> SECONDARY SPECIALTY</p>
-                        <h5>Dermatology</h5>
+                
+                <div class="bg-light rounded h-100 d-flex align-items-center p-5">
+                    <form>
                             
-                    </div>
-                </div>
-                <hr><br>
+                        <h3 class="text-primary mb-5">PATIENT INFORMATION</h3>
 
-                <div class="row g-5">
-                    <div class="col-lg-6 wow">
-                        <h6>Local Number</h6>
-                        <p style="margin-bottom:30px;">524</p>
-                            
-                        <h6>Contact Number</h6>
-                        <p style="margin-bottom:30px;">0906-9599814</p>
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6">
+                                <h5 style="text-align:left; margin-bottom:15px">First Name</h5>
+                                <input type="text" class="form-control border-0" placeholder="First Name" style="height: 55px;">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <h5 style="text-align:left; margin-bottom:15px">Last Name</h5>
+                                <input type="text" class="form-control border-0" placeholder="Last Name" style="height: 55px;">
+                            </div>
 
-                        <h6>Secretary</h6>
-                        <p style="margin-bottom:30px;">Lory</p>    
-                    </div>
-                    
-                    <div class="col-lg-6 wow">
-                        <h6>Clinic Location</h6>
-                        <p>U-MAB 323</p>
-                            
-                        <div class="bg-white rounded p-4" style="margin-top:30px;">
-                            <h6>Clinic Schedule</h6>
-                            <table style="width: 100%;">
-                                <tr>
-                                    <td>Monday</td>
-                                    <td>03:00 PM - 05:00 PM</td>
-                                </tr>
-                                <tr>
-                                    <td>Wednesday</td>
-                                    <td>03:00 PM - 05:00 PM</td>
-                                </tr>
-                            </table>
-                            
+
+                            <div class="col-12 col-sm-6" style="margin-top:30px">
+                                <h5 style="text-align:left; margin-bottom:15px">Date of Birth</h5>
+                                <div class="date" id="date" data-target-input="nearest">
+                                    <input type="date"
+                                        class="form-control border-0 datetimepicker-input"
+                                        placeholder="Date of Birth" style="height: 55px;">
+                                </div>
+                            </div>
+
+                                <!--<div class="col-12 col-sm-6" style="margin-top:30px">
+                                    <h5 style="text-align:left; margin-bottom:15px">Date of Birth</h5>
+                                    <div class="date" id="date" data-target-input="nearest">
+                                        <input type="date"
+                                            class="form-control border-0 datetimepicker-input"
+                                            placeholder="Date of Birth" data-target="#date" data-toggle="datetimepicker" style="height: 55px;">
+                                    </div>
+                                </div>-->
+
+                            <div class="col-12 col-sm-6" style="margin-top:30px">
+                                <h5 style="text-align:left; margin-bottom:15px">Gender</h5>
+                                <select class="form-select border-0" style="height: 55px;">
+                                    <option selected>Choose Gender</option>
+                                    <option value="1">Male</option>
+                                    <option value="2">Female</option>
+                                </select>
+                            </div>
+                                
+                                
+                            <div class="col-12 col-sm-6" style="margin-top:30px">
+                                <h5 style="text-align:left; margin-bottom:15px">Email</h5>
+                                <input type="email" class="form-control border-0" placeholder="Email" style="height: 55px;">
+                            </div>
+                            <div class="col-12 col-sm-6" style="margin-top:30px">
+                                <h5 style="text-align:left; margin-bottom:15px">Contact Number</h5>
+                                <input type="text" class="form-control border-0" placeholder="Contact Number" style="height: 55px;">
+                            </div>
+
+
+                            <div class="col-12 col-sm-6" style="margin-top:30px">  
+                                <h5 style="text-align:left; margin-top:0px;">Is This Your First Visit?</h5>
+                                
+                                <label for="yes" class="radioLeft" ><input type="radio" id="yes" name="visit" value="Yes" style="margin-right:10px" checked>Yes</label>
+                                <label for="no" class="radioLeft"><input type="radio" id="no" name="visit" value="No" style="margin-right:10px">No</label>
+                            </div>
+
+                            <div class="col-12 col-sm-6" style="margin-top:30px"> 
+                                <h5 style="text-align:left; margin-top:0px">Select Schedule</h5>
+                                <label for="yes" class="radioLeft" ><input type="radio" id="tuesday" name="schedule" value="Wednesday (01:00 pM - 05:00 PM)" style="margin-right:10px" checked>Wednesday (01:00 pM - 05:00 PM)</label>
+                                <label for="no" class="radioLeft"><input type="radio" id="saturday" name="schedule" value="Saturday (01:00 pM - 05:00 PM)" style="margin-right:10px">Saturday (01:00 pM - 05:00 PM)</label>
+
+                            </div>
+                                    
+                                
+                            <div class="col-12" style="margin-top:30px">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Confirm Appointment</button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
-            <!--Doctor-1 End-->
-
-            <!--Doctor-2 Start-->
-            <div class="content bg-light" style="margin-top:60px">
-                <h3>Villacorta, Ma. Elena De Luna</h3>
-                <hr>
-                <div class="row g-5">
-                    <div class="col-lg-6 wow">
-                        <p>PRIMARY SPECIALTY</p>
-                        <h5>Internal Medicine</h5>
-                    </div>
-                    <div class="col-lg-6 wow">
-                        <p> SECONDARY SPECIALTY</p>
-                        <h5>Dermatology</h5>
-                            
-                    </div>
-                </div>
-                <hr><br>
-
-                <div class="row g-5">
-                    <div class="col-lg-6 wow">
-                        <h6>Local Number</h6>
-                        <p style="margin-bottom:30px;">524</p>
-                            
-                        <h6>Contact Number</h6>
-                        <p style="margin-bottom:30px;">0906-9599814</p>
-
-                        <h6>Secretary</h6>
-                        <p style="margin-bottom:30px;">Marie</p>    
-                    </div>
-                    
-                    <div class="col-lg-6 wow">
-                        <h6>Clinic Location</h6>
-                        <p>U-MAB 324</p>
-                            
-                        <div class="bg-white rounded p-4" style="margin-top:30px;">
-                            <h6>Clinic Schedule</h6>
-                            <table style="width: 100%;">
-                                <tr>
-                                    <td>Thursday</td>
-                                    <td>10:00 AM - 12:00 PM</td>
-                                </tr>
-                                <tr>
-                                    <td>Saturday</td>
-                                    <td>11:00 AM - 01:00 PM</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Doctor-2 End-->
         </div>
-        <!--Allergology End-->
     </div>
-    
-
+             
        
-
-
+    
+    
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">

@@ -75,7 +75,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>WeCare</h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -83,11 +83,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="doctor-allergology.html" class="nav-item nav-link">Our Doctors</a>
-                <a href="about.html" class="nav-item nav-link">About Us</a>
-                <a href="service.html" class="nav-item nav-link">Our Services</a>
-                <a href="consult.html" class="nav-item nav-link">Consult Now</a>
+                <a href="index.php" class="nav-item nav-link active">Home</a>
+                <a href="doctor-allergology.php" class="nav-item nav-link">Our Doctors</a>
+                <a href="about.php" class="nav-item nav-link">About Us</a>
+                <a href="service.php" class="nav-item nav-link">Our Services</a>
+                <a href="myappointments.php" class="nav-item nav-link">My Appointments</a>
+                <a href="consult.php" class="nav-item nav-link">Consult Now</a>
+                
                 <!--
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>

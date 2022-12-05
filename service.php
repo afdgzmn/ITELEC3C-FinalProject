@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>WeCare - Consult Now</title>
+    <title>WeCare - Our Services</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -31,8 +31,6 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
 <body>
     <!-- Spinner Start -->
@@ -77,7 +75,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>WeCare</h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -85,11 +83,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="doctor-allergology.html" class="nav-item nav-link">Our Doctors</a>
-                <a href="about.html" class="nav-item nav-link">About Us</a>
-                <a href="service.html" class="nav-item nav-link">Our Services</a>
-                <a href="consult.html" class="nav-item nav-link active">Consult Now</a>
+                <a href="index.php" class="nav-item nav-link">Home</a>
+                <a href="doctor-allergology.php" class="nav-item nav-link">Our Doctors</a>
+                <a href="about.php" class="nav-item nav-link">About Us</a>
+                <a href="service.php" class="nav-item nav-link active">Our Services</a>
+                <a href="myappointments.php" class="nav-item nav-link">My Appointments</a>
+                <a href="consult.php" class="nav-item nav-link">Consult Now</a>
                 <!--
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -104,7 +103,7 @@
                 
                 <a href="contact.html" class="nav-item nav-link">Contact</a>-->
             </div>
-            <a href="signin.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">LOG IN<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="signin.php" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">LOG IN<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -112,7 +111,7 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Appointment</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Services</h1>
             <!--<nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb text-uppercase mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
@@ -127,94 +126,111 @@
     <!-- Appointment Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                <!--<p class="d-inline-block border rounded-pill py-1 px-4">Services</p>-->
-                <h1>Make An Appointment</h1>
-                <p class="display-7 mb-2">Please input the following details required to proceed with your appointment.</p>
-                <p class="display-7 mb-5">Rest assured that all data and informatin provided will be put into confidential use only.</p>
-            
-                
-                <div class="bg-light rounded h-100 d-flex align-items-center p-5">
-                    <form>
-                            
-                        <h3 class="text-primary mb-5">PATIENT INFORMATION</h3>
-
-                        <div class="row g-3">
-                            <div class="col-12 col-sm-6">
-                                <h5 style="text-align:left; margin-bottom:15px">First Name</h5>
-                                <input type="text" class="form-control border-0" placeholder="First Name" style="height: 55px;">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <h5 style="text-align:left; margin-bottom:15px">Last Name</h5>
-                                <input type="text" class="form-control border-0" placeholder="Last Name" style="height: 55px;">
-                            </div>
-
-
-                            <div class="col-12 col-sm-6" style="margin-top:30px">
-                                <h5 style="text-align:left; margin-bottom:15px">Date of Birth</h5>
-                                <div class="date" id="date" data-target-input="nearest">
-                                    <input type="date"
-                                        class="form-control border-0 datetimepicker-input"
-                                        placeholder="Date of Birth" style="height: 55px;">
-                                </div>
-                            </div>
-
-                                <!--<div class="col-12 col-sm-6" style="margin-top:30px">
-                                    <h5 style="text-align:left; margin-bottom:15px">Date of Birth</h5>
-                                    <div class="date" id="date" data-target-input="nearest">
-                                        <input type="date"
-                                            class="form-control border-0 datetimepicker-input"
-                                            placeholder="Date of Birth" data-target="#date" data-toggle="datetimepicker" style="height: 55px;">
-                                    </div>
-                                </div>-->
-
-                            <div class="col-12 col-sm-6" style="margin-top:30px">
-                                <h5 style="text-align:left; margin-bottom:15px">Gender</h5>
-                                <select class="form-select border-0" style="height: 55px;">
-                                    <option selected>Choose Gender</option>
-                                    <option value="1">Male</option>
-                                    <option value="2">Female</option>
-                                </select>
-                            </div>
-                                
-                                
-                            <div class="col-12 col-sm-6" style="margin-top:30px">
-                                <h5 style="text-align:left; margin-bottom:15px">Email</h5>
-                                <input type="email" class="form-control border-0" placeholder="Email" style="height: 55px;">
-                            </div>
-                            <div class="col-12 col-sm-6" style="margin-top:30px">
-                                <h5 style="text-align:left; margin-bottom:15px">Contact Number</h5>
-                                <input type="text" class="form-control border-0" placeholder="Contact Number" style="height: 55px;">
-                            </div>
-
-
-                            <div class="col-12 col-sm-6" style="margin-top:30px">  
-                                <h5 style="text-align:left; margin-top:0px;">Is This Your First Visit?</h5>
-                                
-                                <label for="yes" class="radioLeft" ><input type="radio" id="yes" name="visit" value="Yes" style="margin-right:10px" checked>Yes</label>
-                                <label for="no" class="radioLeft"><input type="radio" id="no" name="visit" value="No" style="margin-right:10px">No</label>
-                            </div>
-
-                            <div class="col-12 col-sm-6" style="margin-top:30px"> 
-                                <h5 style="text-align:left; margin-top:0px">Select Schedule</h5>
-                                <label for="yes" class="radioLeft" ><input type="radio" id="tuesday" name="schedule" value="Tuesday (09:00 AM - 12:00 PM)" style="margin-right:10px" checked>Tuesday (09:00 AM - 12:00 PM)</label>
-                                <label for="no" class="radioLeft"><input type="radio" id="saturday" name="schedule" value="Wednesday (08:00 AM - 10:00 PM)" style="margin-right:10px">Wednesday (08:00 AM - 10:00 PM)</label>
-
-                            </div>
-                                    
-                                
-                            <div class="col-12" style="margin-top:30px">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Confirm Appointment</button>
-                            </div>
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <!--<p class="d-inline-block border rounded-pill py-1 px-4">Appointment</p>
+                    <h1 class="mb-4">Make An Appointment To Visit Our Doctor</h1>
+                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    -->
+                    <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-search text-primary" style="font-size:30px"></i>
                         </div>
-                    </form>
+                        <div class="ms-4">
+                            <h5 class="mb-0">Search Doctor</h5>
+                            <p class="mb-2">Choose your doctor from thousands of specialist, general, and trusted hospitals.</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-prescription text-primary" style="font-size:30px"></i>
+                        </div>
+                        <div class="ms-4">
+                            <h5 class="mb-0">Consultation</h5>
+                            <p class="mb-2">Free consultation with our trusted doctors and get the best recomendations.</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-file-alt text-primary" style="font-size:30px"></i>
+                        </div>
+                        <div class="ms-4">
+                            <h5 class="mb-0">Details Information</h5>
+                            <p class="mb-2">Free consultation with our trusted doctors and get the best recomendations.</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-briefcase-medical text-primary" style="font-size:30px"></i>
+                        </div>
+                        <div class="ms-4">
+                            <h5 class="mb-0">Emergency Care</h5>
+                            <p class="mb-2">You can get 24/7 urgent care for yourself and your lovely family.</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded d-flex align-items-center p-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-book-medical text-primary" style="font-size:30px"></i>
+                        </div>
+                        <div class="ms-4">
+                            <h5 class="mb-0">Tracking</h5>
+                            <p class="mb-2">Track and save your medical history and health data.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-stethoscope text-primary" style="font-size:30px"></i>
+                        </div>
+                        <div class="ms-4">
+                            <h5 class="mb-0">Lab Result Interpretation</h5>
+                            <p class="mb-2">To discuss and confirm a working diagnosis of the patient virtually.</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-pills text-primary" style="font-size:30px"></i>
+                        </div>
+                        <div class="ms-4">
+                            <h5 class="mb-0">E-Prescription</h5>
+                            <p class="mb-2">Prescribed by a doctor if medications are needed based on the patient’s health condition.</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-file-signature text-primary" style="font-size:30px"></i>
+                        </div>
+                        <div class="ms-4">
+                            <h5 class="mb-0">Referral Form</h5>
+                            <p class="mb-2">Given by a doctor to a specialist asking for a diagnosis or treatment.</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-paste text-primary" style="font-size:30px"></i>
+                        </div>
+                        <div class="ms-4">
+                            <h5 class="mb-0">Lab Request Form</h5>
+                            <p class="mb-2">Requested to identify, treat, and/or prevent a medical condition.</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-certificate text-primary" style="font-size:30px"></i>
+                        </div>
+                        <div class="ms-4">
+                            <h5 class="mb-0">Medical Certificate</h5>
+                            <p class="mb-2">Given for fit to work, sick leave, or fit to travel.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-             
-       
-    
+    <!-- Appointment End -->
     
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">

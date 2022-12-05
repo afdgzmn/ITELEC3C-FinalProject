@@ -77,7 +77,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>WeCare</h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -85,11 +85,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="doctor-allergology.html" class="nav-item nav-link">Our Doctors</a>
-                <a href="about.html" class="nav-item nav-link">About Us</a>
-                <a href="service.html" class="nav-item nav-link">Our Services</a>
-                <a href="consult.html" class="nav-item nav-link active">Consult Now</a>
+                <a href="index.php" class="nav-item nav-link">Home</a>
+                <a href="doctor-allergology.php" class="nav-item nav-link">Our Doctors</a>
+                <a href="about.php" class="nav-item nav-link">About Us</a>
+                <a href="service.php" class="nav-item nav-link">Our Services</a>
+                <a href="myappointments.php" class="nav-item nav-link">My Appointments</a>
+                <a href="consult.php" class="nav-item nav-link">Consult Now</a>
                 <!--
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -104,7 +105,7 @@
                 
                 <a href="contact.html" class="nav-item nav-link">Contact</a>-->
             </div>
-            <a href="signin.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">LOG IN<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="signin.php" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">LOG IN<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -197,8 +198,8 @@
 
                             <div class="col-12 col-sm-6" style="margin-top:30px"> 
                                 <h5 style="text-align:left; margin-top:0px">Select Schedule</h5>
-                                <label for="yes" class="radioLeft" ><input type="radio" id="tuesday" name="schedule" value="Monday (03:00 PM - 05:00 PM)" style="margin-right:10px" checked>Monday (03:00 PM - 05:00 PM)</label>
-                                <label for="no" class="radioLeft"><input type="radio" id="saturday" name="schedule" value="Wednesday (03:00 PM - 05:00 PM)" style="margin-right:10px">Wednesday (03:00 PM - 05:00 PM)</label>
+                                <label for="yes" class="radioLeft" ><input type="radio" id="tuesday" name="schedule" value="Thursday (10:00 AM - 12:00 PM)" style="margin-right:10px" checked>Thursday (10:00 AM - 12:00 PM)</label>
+                                <label for="no" class="radioLeft"><input type="radio" id="saturday" name="schedule" value="Saturday (11:00 AM - 0:00 PM)" style="margin-right:10px">Saturday (11:00 AM - 0:00 PM)</label>
 
                             </div>
                                     

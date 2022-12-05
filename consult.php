@@ -77,7 +77,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>WeCare</h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -85,11 +85,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="doctor-allergology.html" class="nav-item nav-link">Our Doctors</a>
-                <a href="about.html" class="nav-item nav-link">About Us</a>
-                <a href="service.html" class="nav-item nav-link">Our Services</a>
-                <a href="consult.html" class="nav-item nav-link active">Consult Now</a>
+                <a href="index.php" class="nav-item nav-link">Home</a>
+                <a href="doctor-allergology.php" class="nav-item nav-link">Our Doctors</a>
+                <a href="about.php" class="nav-item nav-link">About Us</a>
+                <a href="service.php" class="nav-item nav-link">Our Services</a>
+                <a href="myappointments.php" class="nav-item nav-link">My Appointments</a>
+                <a href="consult.php" class="nav-item nav-link">Consult Now</a>
                 <!--
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -104,7 +105,7 @@
                 
                 <a href="contact.html" class="nav-item nav-link">Contact</a>-->
             </div>
-            <a href="signin.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">LOG IN<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="signin.php" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">LOG IN<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -147,7 +148,7 @@
                                         <td>02:00 PM - 04:00 PM</td>
                                     </tr>
                                 </table>
-                                <button onclick="window.location.href='slot-Agustin.html'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
+                                <button onclick="window.location.href='slot-Agustin.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
                             </div>
 
                             <div class="col-lg-6 rounded bg-light" style="padding:20px; width:48%; margin-right:10px;">
@@ -164,7 +165,7 @@
                                         <td>01:00 PM - 03:00 PM</td>
                                     </tr>
                                 </table>
-                                <button onclick="window.location.href='slot-Yapjuangco.html'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
+                                <button onclick="window.location.href='slot-Yapjuangco.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
                             </div>
                         </div>
 
@@ -183,7 +184,7 @@
                                         <td>09:00 AM - 11:00 AM</td>
                                     </tr>
                                 </table>
-                                <button onclick="window.location.href='slot-Carpio.html'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
+                                <button onclick="window.location.href='slot-Carpio.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
                             </div>
 
                             <div class="col-lg-6 rounded bg-light" style="padding:20px; width:48%; margin-right:10px; margin-top: 30px;">
@@ -200,7 +201,7 @@
                                         <td>01:00 PM - 03:00 PM</td>
                                     </tr>
                                 </table>
-                                <button onclick="window.location.href='slot-Nido.html'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
+                                <button onclick="window.location.href='slot-Nido.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
                             </div>
                         </div>
 
@@ -219,7 +220,7 @@
                                         <td>03:00 PM - 05:00 PM</td>
                                     </tr>
                                 </table>
-                                <button onclick="window.location.href='slot-Paulino.html'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
+                                <button onclick="window.location.href='slot-Paulino.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
                             </div>
 
                             <div class="col-lg-6 rounded bg-light" style="padding:20px; width:48%; margin-right:10px; margin-top: 30px;">
@@ -236,7 +237,7 @@
                                         <td>08:00 AM - 10:00 PM</td>
                                     </tr>
                                 </table>
-                                <button onclick="window.location.href='slot-Santos.html'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
+                                <button onclick="window.location.href='slot-Santos.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
                             </div>
                         </div>
                     </div>
@@ -258,7 +259,7 @@
                                         <td>03:00 PM - 05:00 PM</td>
                                     </tr>
                                 </table>
-                                <button onclick="window.location.href='slot-Tamayo.html'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
+                                <button onclick="window.location.href='slot-Tamayo.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
                             </div>
 
                             <div class="col-lg-6 rounded bg-light" style="padding:20px; width:48%; margin-right:10px;">
@@ -275,7 +276,7 @@
                                         <td>11:00 AM - 0:00 PM</td>
                                     </tr>
                                 </table>
-                                <button onclick="window.location.href='slot-Villacorta.html'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
+                                <button onclick="window.location.href='slot-Villacorta.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
                             </div>
                         </div>
                         <div class="row g-3">
@@ -293,7 +294,7 @@
                                         <td>03:00 PM - 05:00 PM</td>
                                     </tr>
                                 </table>
-                                <button onclick="window.location.href='slot-Piano.html'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
+                                <button onclick="window.location.href='slot-Piano.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
                             </div>
 
                             <div class="col-lg-6 rounded bg-light" style="padding:20px; width:48%; margin-right:10px; margin-top:30px;">
@@ -310,7 +311,7 @@
                                         <td>01:00 pM - 05:00 PM</td>
                                     </tr>
                                 </table>
-                                <button onclick="window.location.href='slot-Salonga.html'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
+                                <button onclick="window.location.href='slot-Salonga.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
                             </div>
                         </div>
                     </div>
