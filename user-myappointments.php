@@ -32,6 +32,22 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
+<style>
+td, th {
+  text-align: left;
+  padding: 8px;
+}
+th{
+    color:white;
+}
+td{
+    color:black;
+}
+tr:nth-child(even) {
+  background-color: #EFF5FF;
+}
+</style>
+</style>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
 <body>
@@ -77,7 +93,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="user-index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>WeCare</h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -85,12 +101,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.php" class="nav-item nav-link">Home</a>
-                <a href="doctor-allergology.php" class="nav-item nav-link">Our Doctors</a>
-                <a href="about.php" class="nav-item nav-link">About Us</a>
-                <a href="service.php" class="nav-item nav-link">Our Services</a>
-                <a href="myappointments.php" class="nav-item nav-link">My Appointments</a>
-                <a href="consult.php" class="nav-item nav-link">Consult Now</a>
+                <a href="user-index.php" class="nav-item nav-link">Home</a>
+                <a href="user-doctor-allergology.php" class="nav-item nav-link">Our Doctors</a>
+                <a href="user-about.php" class="nav-item nav-link">About Us</a>
+                <a href="user-service.php" class="nav-item nav-link">Our Services</a>
+                <a href="user-myappointments.php" class="nav-item nav-link">My Appointments</a>
+                <a href="user-consult.php" class="nav-item nav-link">Consult Now</a>
                 <!--
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -113,7 +129,7 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Appointment</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown">My Appointments</h1>
             <!--<nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb text-uppercase mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
@@ -128,11 +144,40 @@
     <!-- Appointment Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 100%; padding:0px;">
-                <div class="row g-3">
-                    <div class="col-12 col-sm-6">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 100%;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr style="background-color:#458FF6;">
+                  
+                        <th>APPOINTMENT TO</th>
+                        <th>APPOINTMENT DATE</th>
+                        <th>APPOINTMENT TIME</th>
+                        <th>STATUS</th>
+                        <th>CANCEL BOOKING</th>
+                    </tr>
+                    <tr>
+                        <td>Doctor's Name</td>
+                        <td>Date</td>
+                        <td>Time</td>
+                        <td>Pending/Approved</td>
+                        <td><button class="btn" style="background-color:black; color:white;">Cancel</button></td>
+                    </tr>
+                    <tr>
+                        <td>Doctor's Name</td>
+                        <td>Date</td>
+                        <td>Time</td>
+                        <td>Pending/Approved</td>
+                        <td><button class="btn" style="background-color:black; color:white;">Cancel</button></td>
+                    </tr>
+                    <tr>
+                        <td>Doctor's Name</td>
+                        <td>Date</td>
+                        <td>Time</td>
+                        <td>Pending/Approved</td>
+                        <td><button class="btn" style="background-color:black; color:white;">Cancel</button></td>
+                    </tr>
+                </table>
                         
-                        <div class="row g-3">
+                        <!--<div class="row g-3">
 
                             <div class="col-lg-6 rounded bg-light" style="padding:20px; width:48%; margin-right:10px;">
                                 <p class="d-inline-block border rounded-pill py-1 px-4">Allergology</p>    
@@ -167,155 +212,8 @@
                                 </table>
                                 <button onclick="window.location.href='slot-Yapjuangco.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
                             </div>
-                        </div>
-
-                        <div class="row g-3">
-                            <div class="col-lg-6 rounded bg-light" style="padding:20px; width:48%; margin-right:10px;margin-top: 30px;">
-                                <p class="d-inline-block border rounded-pill py-1 px-4">Gastroenterology</p>    
-                                <h5 class="mb-0">Carpio, Gian Carlo </h5><br>
-                                <h6>Clinic Schedule</h6>
-                                <table style="width: 100%;">
-                                    <tr>
-                                        <td>Tuesday</td>
-                                        <td>09:00 AM - 11:00 AM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Thursday</td>
-                                        <td>09:00 AM - 11:00 AM</td>
-                                    </tr>
-                                </table>
-                                <button onclick="window.location.href='slot-Carpio.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
-                            </div>
-
-                            <div class="col-lg-6 rounded bg-light" style="padding:20px; width:48%; margin-right:10px; margin-top: 30px;">
-                                <p class="d-inline-block border rounded-pill py-1 px-4">Gastroenterology</p>    
-                                <h5 class="mb-0">Nido, Maria Thea</h5><br>
-                                <h6>Clinic Schedule</h6>
-                                <table style="width: 100%;">
-                                    <tr>
-                                        <td>Wednesday</td>
-                                        <td>01:00 PM - 03:00 PM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Saturday</td>
-                                        <td>01:00 PM - 03:00 PM</td>
-                                    </tr>
-                                </table>
-                                <button onclick="window.location.href='slot-Nido.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
-                            </div>
-                        </div>
-
-                        <div class="row g-3">
-                            <div class="col-lg-6 rounded bg-light" style="padding:20px; width:48%; margin-right:10px;margin-top: 30px;">
-                                <p class="d-inline-block border rounded-pill py-1 px-4">Ophthalmology</p>    
-                                <h5 class="mb-0">Paulino, Jose Antonio</h5><br>
-                                <h6>Clinic Schedule</h6>
-                                <table style="width: 100%;">
-                                    <tr>
-                                        <td>Thursday</td>
-                                        <td>08:00 AM - 10:00 AM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Saturday</td>
-                                        <td>03:00 PM - 05:00 PM</td>
-                                    </tr>
-                                </table>
-                                <button onclick="window.location.href='slot-Paulino.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
-                            </div>
-
-                            <div class="col-lg-6 rounded bg-light" style="padding:20px; width:48%; margin-right:10px; margin-top: 30px;">
-                                <p class="d-inline-block border rounded-pill py-1 px-4">Ophthalmology</p>    
-                                <h5 class="mb-0">Santos, Ana Marie</h5><br>
-                                <h6>Clinic Schedule</h6>
-                                <table style="width: 100%;">
-                                    <tr>
-                                        <td>Tuesday</td>
-                                        <td>09:00 AM - 12:00 PM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Wednesday</td>
-                                        <td>08:00 AM - 10:00 PM</td>
-                                    </tr>
-                                </table>
-                                <button onclick="window.location.href='slot-Santos.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6">
-                        
-                        <div class="row g-3">
-                            <div class="col-lg-6 rounded bg-light" style="padding:20px; width:48%; margin-right:10px;">
-                                <p class="d-inline-block border rounded-pill py-1 px-4">Dermatology</p>    
-                                <h5 class="mb-0">Tamayo, Ma. Carmela</h5><br>
-                                <h6>Clinic Schedule</h6>
-                                <table style="width: 100%;">
-                                    <tr>
-                                        <td>Monday</td>
-                                        <td>03:00 PM - 05:00 PM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Wednesday</td>
-                                        <td>03:00 PM - 05:00 PM</td>
-                                    </tr>
-                                </table>
-                                <button onclick="window.location.href='slot-Tamayo.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
-                            </div>
-
-                            <div class="col-lg-6 rounded bg-light" style="padding:20px; width:48%; margin-right:10px;">
-                                <p class="d-inline-block border rounded-pill py-1 px-4">Dermatology</p>    
-                                <h5 class="mb-0">Villacorta, Ma. Elena</h5><br>
-                                <h6>Clinic Schedule</h6>
-                                <table style="width: 100%;">
-                                    <tr>
-                                        <td>Thursday</td>
-                                        <td>10:00 AM - 12:00 PM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Saturday</td>
-                                        <td>11:00 AM - 0:00 PM</td>
-                                    </tr>
-                                </table>
-                                <button onclick="window.location.href='slot-Villacorta.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
-                            </div>
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-lg-6 rounded bg-light" style="padding:20px; width:48%; margin-right:10px; margin-top:30px;">
-                                <p class="d-inline-block border rounded-pill py-1 px-4">Neurology</p>    
-                                <h5 class="mb-0">Piano, Anthony Nacu</h5><br>
-                                <h6>Clinic Schedule</h6>
-                                <table style="width: 100%;">
-                                    <tr>
-                                        <td>Monday</td>
-                                        <td>03:00 PM - 05:00 PM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Saturday</td>
-                                        <td>03:00 PM - 05:00 PM</td>
-                                    </tr>
-                                </table>
-                                <button onclick="window.location.href='slot-Piano.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
-                            </div>
-
-                            <div class="col-lg-6 rounded bg-light" style="padding:20px; width:48%; margin-right:10px; margin-top:30px;">
-                                <p class="d-inline-block border rounded-pill py-1 px-4">Neurology</p>    
-                                <h5 class="mb-0">Salonga, Aida Mendoza</h5><br>
-                                <h6>Clinic Schedule</h6>
-                                <table style="width: 100%;">
-                                    <tr>
-                                        <td>Wednesday</td>
-                                        <td>01:00 pM - 05:00 PM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Saturday</td>
-                                        <td>01:00 pM - 05:00 PM</td>
-                                    </tr>
-                                </table>
-                                <button onclick="window.location.href='slot-Salonga.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        </div>-->
+                   
             </div>
         </div>
     </div>
