@@ -75,7 +75,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow">
-        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="user-index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>WeCare</h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -83,12 +83,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.php" class="nav-item nav-link">Home</a>
-                <a href="team.php" class="nav-item nav-link active">Our Doctors</a>
-                <a href="about.php" class="nav-item nav-link">About Us</a>
-                <a href="service.php" class="nav-item nav-link">Our Services</a>
-                <a href="myappointments.php" class="nav-item nav-link">My Appointments</a>
-                <a href="consult.php" class="nav-item nav-link">Consult Now</a>
+                <a href="user-index.php" class="nav-item nav-link">Home</a>
+                <a href="user-doctor-dermatology.php" class="nav-item nav-link active">Our Doctors</a>
+                <a href="user-about.php" class="nav-item nav-link">About Us</a>
+                <a href="user-service.php" class="nav-item nav-link">Our Services</a>
+                <a href="user-myappointments.php" class="nav-item nav-link">My Appointments</a>
+                <a href="user-consult.php" class="nav-item nav-link">Consult Now</a>
                 <!--
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -134,11 +134,11 @@
           </p>
         <div class="sidebar">
             <h3 style="padding:30px 20px 20px 20px; text-align: center;">Specialization</h3>
-            <a href="doctor-allergology.php">Allergology</a>
-            <a href="doctor-dermatology.php">Dermatology</a>
-            <a class="active" href="doctor-gastroenterology.php">Gastroenterology</a>
-            <a href="doctor-neurology.php">Neurology</a>
-            <a href="doctor-opthalmology.php">Opthalmology</a>
+            <a href="user-doctor-allergology.php">Allergology</a>
+            <a class="active" href="user-doctor-dermatology.php">Dermatology</a>
+            <a href="user-doctor-gastroenterology.php">Gastroenterology</a>
+            <a href="user-doctor-neurology.php">Neurology</a>
+            <a href="user-doctor-opthalmology.php">Opthalmology</a>
         </div>
         
         <!--Allergology Start-->
@@ -146,7 +146,7 @@
             
             <!--Doctor-1 Start-->
             <div class="content bg-light">
-                <h3>Carpio, Gian Carlo Alvero</h3>
+                <h3>Tamayo, Ma. Carmela Abad</h3>
                 <hr>
                 <div class="row g-5">
                     <div class="col-lg-6 wowp">
@@ -155,7 +155,7 @@
                     </div>
                     <div class="col-lg-6 wow">
                         <p> SECONDARY SPECIALTY</p>
-                        <h5>Gastroenterology</h5>
+                        <h5>Dermatology</h5>
                             
                     </div>
                 </div>
@@ -164,29 +164,29 @@
                 <div class="row g-5">
                     <div class="col-lg-6 wow">
                         <h6>Local Number</h6>
-                        <p style="margin-bottom:30px;">521</p>
+                        <p style="margin-bottom:30px;">524</p>
                             
                         <h6>Contact Number</h6>
-                        <p style="margin-bottom:30px;">0917-6219024</p>
+                        <p style="margin-bottom:30px;">0906-9599814</p>
 
                         <h6>Secretary</h6>
-                        <p style="margin-bottom:30px;">Banneth</p>    
+                        <p style="margin-bottom:30px;">Lory</p>    
                     </div>
                     
                     <div class="col-lg-6 wow">
                         <h6>Clinic Location</h6>
-                        <p>U-MAB 310</p>
+                        <p>U-MAB 323</p>
                             
                         <div class="bg-white rounded p-4" style="margin-top:30px;">
                             <h6>Clinic Schedule</h6>
                             <table style="width: 100%;">
                                 <tr>
-                                    <td>Tuesday</td>
-                                    <td>09:00 AM - 11:00 AM</td>
+                                    <td>Monday</td>
+                                    <td>03:00 PM - 05:00 PM</td>
                                 </tr>
                                 <tr>
-                                    <td>Thursday</td>
-                                    <td>09:00 AM - 11:00 AM</td>
+                                    <td>Wednesday</td>
+                                    <td>03:00 PM - 05:00 PM</td>
                                 </tr>
                             </table>
                             
@@ -198,7 +198,7 @@
 
             <!--Doctor-2 Start-->
             <div class="content bg-light" style="margin-top:60px">
-                <h3>Nido, Maria Thea Mulingbayan</h3>
+                <h3>Villacorta, Ma. Elena De Luna</h3>
                 <hr>
                 <div class="row g-5">
                     <div class="col-lg-6 wow">
@@ -207,7 +207,7 @@
                     </div>
                     <div class="col-lg-6 wow">
                         <p> SECONDARY SPECIALTY</p>
-                        <h5>Gastroenterology</h5>
+                        <h5>Dermatology</h5>
                             
                     </div>
                 </div>
@@ -216,29 +216,29 @@
                 <div class="row g-5">
                     <div class="col-lg-6 wow">
                         <h6>Local Number</h6>
-                        <p style="margin-bottom:30px;">530</p>
+                        <p style="margin-bottom:30px;">524</p>
                             
                         <h6>Contact Number</h6>
-                        <p style="margin-bottom:30px;">09658993205</p>
+                        <p style="margin-bottom:30px;">0906-9599814</p>
 
                         <h6>Secretary</h6>
-                        <p style="margin-bottom:30px;">Salve</p>    
+                        <p style="margin-bottom:30px;">Marie</p>    
                     </div>
                     
                     <div class="col-lg-6 wow">
                         <h6>Clinic Location</h6>
-                        <p>U-MAB 340</p>
+                        <p>U-MAB 324</p>
                             
                         <div class="bg-white rounded p-4" style="margin-top:30px;">
                             <h6>Clinic Schedule</h6>
                             <table style="width: 100%;">
                                 <tr>
-                                    <td>Wednesday</td>
-                                    <td>01:00 PM - 03:00 PM</td>
+                                    <td>Thursday</td>
+                                    <td>10:00 AM - 12:00 PM</td>
                                 </tr>
                                 <tr>
                                     <td>Saturday</td>
-                                    <td>01:00 PM - 03:00 PM</td>
+                                    <td>11:00 AM - 01:00 PM</td>
                                 </tr>
                             </table>
                         </div>
