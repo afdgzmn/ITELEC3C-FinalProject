@@ -60,26 +60,15 @@
                 <?php } ?>
                 <div class="form-group mb-3">
                   <label class="label" for="name">Email</label>
-                  <input type="text" class="form-control" placeholder="Email">
+                  <input type="email" class="form-control" id="email" name="email" required placeholder="Email">
+                  <div id="email-check"></div>
                 </div>
+
                 <div class="form-group mb-3">
                   <label class="label" for="password">Password</label>
-                  <input type="password" class="form-control" placeholder="Password" name="password"
-                    autocomplete="current-password"="" id="id_password">
-                  <i class="fa fa-eye field-icon" id="togglePassword" style="margin-left: 0px; cursor: pointer;"></i>
-
-                  <script>
-                  const togglePassword = document.querySelector('#togglePassword');
-                  const password = document.querySelector('#id_password');
-
-                  togglePassword.addEventListener('click', function(e) {
-                    // toggle the type attribute
-                    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-                    password.setAttribute('type', type);
-                    // toggle the eye slash icon
-                    this.classList.toggle('fa-eye-slash');
-                  });
-                  </script>
+                  <input type="password" class="form-control" id="password" name="password" required placeholder="Password" autocomplete="current-password"="">
+                  <i class="fa fa-eye field-icon" id="toggle-password" style="margin-left: 0px; cursor: pointer;"></i>
+                  <div id="password-check"></div>
 
                   <a href="#">Forgot Password?</a>
                   <!--<input type="password" class="form-control" placeholder="Password" id="myInput" required>
@@ -111,7 +100,7 @@
                 </div>
 
                 <div class="form-group">
-                  <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
+                  <button type="submit" class="form-control btn btn-primary rounded submit px-3" id="btn-submit">Sign In</button>
                 </div>
 
               </form>
@@ -127,6 +116,7 @@
   <script src="js/popper.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/signin.js"></script>
 
 </body>
 

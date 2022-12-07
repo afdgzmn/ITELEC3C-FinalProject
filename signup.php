@@ -70,61 +70,40 @@
                   <input type="text" required name="fname" class="form-control" placeholder="First name"
                     value="<?php echo $_GET['fname']; ?>">
                   <?php } else { ?>
-                  <input type="text" required name="fname" class="form-control" placeholder="First name">
+                  <input type="text" required name="fname" class="form-control" id="first-name" placeholder="First name">
                   <?php } ?>
+                  <div id="first-name-check"></div>
 
                   <label class="label" for="name">Last Name</label>
                   <?php if (isset($_GET['lname'])) { ?>
                   <input type="text" required class="form-control" placeholder="Last name"
                     value="<?php echo $_GET['lname']; ?>">
                   <?php } else { ?>
-                  <input type="text" required name="lname" class="form-control" placeholder="Last name">
+                  <input type="text" required name="lname" class="form-control" id="last-name" placeholder="Last name">
                   <?php } ?>
+                  <div id="last-name-check"></div>
 
                   <label class="label" for="name">Email</label>
                   <?php if (isset($_GET['email'])) { ?>
                   <input type="text" required name="email" class="form-control" placeholder="Email"
                     value="<?php echo $_GET['email']; ?>">
                   <?php } else { ?>
-                  <input type="text" required name="email" class="form-control" placeholder="Email">
+                  <input type="text" required name="email" class="form-control" id="email" placeholder="Email">
                   <?php } ?>
+                  <div id="email-check"></div>
 
 
                   <label class="label" for="name">Password</label>
                   <input type="password" class="form-control" placeholder="Password" name="password"
-                    autocomplete="current-password" required="" id="id_password">
-                  <i class="fa fa-eye field-icon" id="togglePassword" style="cursor: pointer;"></i>
-
-                  <script>
-                  const togglePassword = document.querySelector('#togglePassword');
-                  const password = document.querySelector('#id_password');
-
-                  togglePassword.addEventListener('click', function(e) {
-                    // toggle the type attribute
-                    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-                    password.setAttribute('type', type);
-                    // toggle the eye slash icon
-                    this.classList.toggle('fa-eye-slash');
-                  });
-                  </script>
+                    autocomplete="current-password" required="" id="password">
+                  <i class="fa fa-eye field-icon" id="toggle-password" style="cursor: pointer;"></i>
+                  <div id="password-check"></div>
 
                   <label class="label" for="name">Confirm Password</label>
                   <input type="password" class="form-control" placeholder="Confirm Password" name="password"
-                    autocomplete="current-password" required="" id="id_confirmpassword">
-                  <i class="fa fa-eye field-icon" id="toggleConfirmPassword" style="cursor: pointer;"></i>
-
-                  <script>
-                  const toggleConfirmPassword = document.querySelector('#toggleConfirmPassword');
-                  const confirmpassword = document.querySelector('#id_confirmpassword');
-
-                  toggleConfirmPassword.addEventListener('click', function(e) {
-                    // toggle the type attribute
-                    const type = confirmpassword.getAttribute('type') === 'password' ? 'text' : 'password';
-                    confirmpassword.setAttribute('type', type);
-                    // toggle the eye slash icon
-                    this.classList.toggle('fa-eye-slash');
-                  });
-                  </script>
+                    autocomplete="current-password" required="" id="confirm-password">
+                  <i class="fa fa-eye field-icon" id="toggle-confirm-password" style="cursor: pointer;"></i>
+                  <div id="confirm-password-check"></div>
 
                   <a href="#">Forgot Password?</a>
                 </div>
@@ -162,7 +141,7 @@
 
 
                 <div class="form-group">
-                  <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign Up</button>
+                  <button type="submit" class="form-control btn btn-primary rounded submit px-3" id="btn-submit" >Sign Up</button>
                 </div>
 
               </form>
@@ -178,6 +157,7 @@
   <script src="js/popper.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/signup.js"></script>
 
 </body>
 
