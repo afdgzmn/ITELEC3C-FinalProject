@@ -43,7 +43,7 @@
                 </div>
                 <div class="w-100">
                   <p class="social-media d-flex justify-content-end">
-                    <a href="index.php" class="social-icon d-flex align-items-center justify-content-center"><span
+                    <a href="user-index.php" class="social-icon d-flex align-items-center justify-content-center"><span
                         class="fa fa-home"></span></a>
 
                     <!--<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
