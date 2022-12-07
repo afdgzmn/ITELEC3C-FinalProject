@@ -101,11 +101,11 @@ tr:nth-child(even) {
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="admin-dashboard.php" class="nav-item nav-link">Dashboard</a>
-                <a href="doctor-allergology.php" class="nav-item nav-link">Our Doctors</a>
+                <a href="admin-dashboard.php" class="nav-item nav-link active">Dashboard</a>
+                <!--<a href="doctor-allergology.php" class="nav-item nav-link">Our Doctors</a>
                 <a href="about.php" class="nav-item nav-link">About Us</a>
                 <a href="service.php" class="nav-item nav-link">Our Services</a>
-                <!--
+                
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu rounded-0 rounded-bottom m-0">
@@ -127,7 +127,7 @@ tr:nth-child(even) {
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Patient Requests</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Dashboard</h1>
             <!--<nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb text-uppercase mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
@@ -143,7 +143,8 @@ tr:nth-child(even) {
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 100%;">
-                <table style="width: 100%; color:black; border-collapse: collapse;">
+            <h1>Patient Request</h1>
+                <table style="width: 100%; color:black; border-collapse: collapse; margin-top:30px;">
                     <tr style="background-color:#458FF6;">
                   
                         <th>PATIENT NAME</th>

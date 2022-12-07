@@ -105,7 +105,7 @@ tr:nth-child(even) {
                 <a href="user-doctor-allergology.php" class="nav-item nav-link">Our Doctors</a>
                 <a href="user-about.php" class="nav-item nav-link">About Us</a>
                 <a href="user-service.php" class="nav-item nav-link">Our Services</a>
-                <a href="user-myappointments.php" class="nav-item nav-link">My Appointments</a>
+                <a href="user-myappointments.php" class="nav-item nav-link active">My Appointments</a>
                 <a href="user-consult.php" class="nav-item nav-link">Consult Now</a>
                 <!--
                 <div class="nav-item dropdown">

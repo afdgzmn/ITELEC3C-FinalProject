@@ -90,7 +90,7 @@
                 <a href="user-about.php" class="nav-item nav-link">About Us</a>
                 <a href="user-service.php" class="nav-item nav-link">Our Services</a>
                 <a href="user-myappointments.php" class="nav-item nav-link">My Appointments</a>
-                <a href="user-consult.php" class="nav-item nav-link">Consult Now</a>
+                <a href="user-consult.php" class="nav-item nav-link active">Consult Now</a>
                 <!--
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
