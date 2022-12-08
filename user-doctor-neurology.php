@@ -75,7 +75,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow">
-        <a href="user-index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="home.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>WeCare</h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -83,7 +83,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="user-index.php" class="nav-item nav-link">Home</a>
+                <a href="home.php" class="nav-item nav-link">Home</a>
                 <a href="user-doctor-neurology.php" class="nav-item nav-link active">Our Doctors</a>
                 <a href="user-about.php" class="nav-item nav-link">About Us</a>
                 <a href="user-service.php" class="nav-item nav-link">Our Services</a>

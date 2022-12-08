@@ -1,3 +1,11 @@
+<?php 
+
+include_once("controllers/HomeController.php");
+$controller = new HomeController();
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,11 +42,9 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
+
+    <?php include_once('layouts/spinner.php') ?>
+
     <!-- Spinner End -->
 
 
@@ -75,15 +81,17 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
-        <a href="user-index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="home.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>WeCare</h1>
         </a>
+
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="user-index.php" class="nav-item nav-link active">Home</a>
+                <a href="home.php" class="nav-item nav-link active">Home</a>
                 <a href="user-doctor-allergology.php" class="nav-item nav-link">Our Doctors</a>
                 <a href="user-about.php" class="nav-item nav-link">About Us</a>
                 <a href="user-service.php" class="nav-item nav-link">Our Services</a>
@@ -104,7 +112,9 @@
                 
                 <a href="contact.html" class="nav-item nav-link">Contact</a>-->
             </div>
-            <a href="user-signin.php" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">LOG IN<i class="fa fa-arrow-right ms-3"></i></a>
+
+            <?php include_once('layouts/components/session_checker.php') ?>
+        
         </div>
     </nav>
     <!-- Navbar End -->
@@ -205,6 +215,7 @@
                 <p class="d-inline-block border rounded-pill py-1 px-4">Services</p>
                 <h1>Health Care Solutions</h1>
             </div>
+
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item bg-light rounded h-100 p-5">
@@ -216,6 +227,7 @@
                         <!--<a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>-->
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item bg-light rounded h-100 p-5">
                         <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
@@ -226,6 +238,7 @@
                         <!--<a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>-->
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item bg-light rounded h-100 p-5">
                         <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
@@ -236,6 +249,7 @@
                         <!--<a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>-->
                     </div>
                 </div>
+                
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item bg-light rounded h-100 p-5">
                         <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
@@ -246,6 +260,7 @@
                         <!--<a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>-->
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item bg-light rounded h-100 p-5">
                         <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
@@ -256,6 +271,7 @@
                         <!--<a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>-->
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item bg-light rounded h-100 p-5">
                         <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
@@ -266,6 +282,7 @@
                         <!--<a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>-->
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -280,7 +297,8 @@
                     <div class="p-lg-5 ps-lg-0">
                         <p class="d-inline-block border rounded-pill text-light py-1 px-4">Consult</p>
                         <h1 class="text-white mb-4">Steps to Follow</h1>
-                        <p class="text-white mb-4 pb-2">Please follow the steps accordingly to book an appointment with our doctors</p>
+
+                        <p class="text-white mb-4 pb-2">Follow the steps accordingly to book an appointment with our doctors.</p>
                         <div class="row g-4">
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
@@ -293,6 +311,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
@@ -304,6 +323,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
@@ -315,6 +335,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
@@ -326,14 +347,17 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-6 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="position-absolute img-fluid w-100 h-100" src="img/feature.jpg" style="object-fit: cover;" alt="">
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -537,61 +561,9 @@
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">WeCare</h5>
-                    <p class="mb-2">WeCare provides professional help, affordable healthcare, accessible, and online to all. </p>
-                    <!--<p class="mb-2">Your health comes first, because we care about you.</p>-->
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Address</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Las Piñas, Alabang Zapote Rd</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+639 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>WeCare@gmail.com</p>
-                    <!--
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>-->
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <!--<h5 class="text-light mb-4">Services</h5>
-                    <a class="btn btn-link" href="">Cardiology</a>
-                    <a class="btn btn-link" href="">Pulmonary</a>
-                    <a class="btn btn-link" href="">Neurology</a>
-                    <a class="btn btn-link" href="">Orthopedics</a>
-                    <a class="btn btn-link" href="">Laboratory</a>-->
+    
+    <?php include_once('layouts/footer.php') ?>
 
-                    <h5 class="text-light mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="">Our Doctors</a>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Consult Now</a>
-                </div>
-                <!--<div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Newsletter</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>-->
-            </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">WeCare</a>, All Right Reserved.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Footer End -->
 
 

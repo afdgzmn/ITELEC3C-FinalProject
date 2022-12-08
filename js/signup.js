@@ -1,5 +1,5 @@
 const email_format = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-const password_format = /^.*(?=.{8,20})(?=.*[a-z])(?=.*[0-9])(?=.*[\d\x])(?=.*[@$!%*#?&)(^_=+-]).*$/;
+const password_format = /^.*(?=.{8,20})(?=.*[a-z])(?=.*[0-9])(?=.*[\d\x])(?=.*[@$!%*#?&)(^_=+-]).*$/
 
 var first_name = document.getElementById('first-name')
 var last_name = document.getElementById('last-name')

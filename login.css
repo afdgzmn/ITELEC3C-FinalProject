@@ -102,7 +102,7 @@ img{
     box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
 }
 .right {
-	background: linear-gradient(212.38deg, rgba(115, 148, 245, 0.7) 0%, rgba(60, 69, 245, 0.71) 100%),url(doctor.jpg) 100%;
+	background: linear-gradient(212.38deg, rgba(115, 148, 245, 0.7) 0%, rgba(60, 69, 245, 0.71) 100%),url(img/doctor.jpg) 100%;
 	color: #fff;
 	position: relative;
 }

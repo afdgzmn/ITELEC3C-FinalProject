@@ -1,54 +1,86 @@
 <?php
-session_start();
-include "db_conn.php";
 
-if (isset($_POST['email']) && isset($_POST['password'])) {
+include_once("controllers/LoginController.php");
+$controller = new LoginController();
+$isAuthenticated = $controller->isAuthenticated();
 
-	function validate($data)
-	{
-		$data = trim($data);
-		$data = stripslashes($data);
-		$data = htmlspecialchars($data);
-		return $data;
-	}
+$errors = array();
 
-	$email = validate($_POST['email']);
-	$pass = validate($_POST['password']);
-
-	if (empty($email)) {
-		header("Location: signin.php?error=Email is required");
-		exit();
-	} else if (empty($pass)) {
-		header("Location: signin.php?error=Password is required");
-		exit();
-	} else {
-
-		$pass = md5($pass);
-
-
-		$sql = "SELECT * FROM users WHERE email='$email' AND password='$pass'";
-
-		$result = mysqli_query($conn, $sql);
-
-		if (mysqli_num_rows($result) === 1) {
-			$row = mysqli_fetch_assoc($result);
-			if ($row['email'] === $email && $row['password'] === $pass) {
-				$_SESSION['fname'] = $row['fname'];
-				$_SESSION['lname'] = $row['lname'];
-				$_SESSION['email'] = $row['email'];
-				$_SESSION['id'] = $row['id'];
-				header("Location: index.html");
-				exit();
-			} else {
-				header("Location: signin.php?error=Incorect Email or password&$user_data");
-				exit();
-			}
-		} else {
-			header("Location: signin.php?error=Incorect Email or password&$user_data");
-			exit();
-		}
-	}
-} else {
-	header("Location: signin.php");
-	exit();
+if (isset($_POST['btn_login'])) {
+    $errors = $controller->validateData($_POST);
 }
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>WeCare - Log In</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/signin.css">
+</head>
+
+<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<!--<div class="col-md-6 text-center mb-5">
+						<h2 class="heading-section">Login #04</h2>
+					</div>-->
+			</div>
+
+			<div class="row justify-content-center">
+				<div class="col-md-12 col-lg-10">
+					<div class="wrap d-md-flex">
+						<div class="img" style="background: linear-gradient(212.38deg, rgba(150, 141, 248, 0.7) 0%, rgba(60, 49, 190, 0.71) 100%),url(img/doctor.jpg) 70%;">
+								<!--<p class="desc">WeCare</p>
+								<p class="desc">Your health comes first, because we care about you.</p>-->
+							<div class="right">
+								<div class="right-text">
+									<h2>WeCare</h2>
+									<h5>Your health comes first, because we care about you.</h5>
+								</div>
+							</div>
+						</div>
+
+						<div class="login-wrap p-4 p-md-5">
+							<div class="d-flex">
+								<div class="w-100">
+									<h3 class="mb-4">Sign In</h3>
+								</div>
+
+								<div class="w-100">
+									<p class="social-media d-flex justify-content-end">
+										<a href="home.php" class="social-icon d-flex align-items-center justify-content-center"><span
+											class="fa fa-home"></span></a>
+
+										<!--<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
+															<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>-->
+									</p>
+								</div>
+
+							</div>
+						
+							<!-- Login form -->
+							<?php include_once('layouts/components/login_form.php') ?>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/login.js"></script>
+
+</body>
+
+</html>
