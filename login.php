@@ -96,8 +96,6 @@ if (isset($_POST['btn_login'])) {
 									<input type="password" class="form-control" id="password" name="password" required placeholder="Password">
 									<i class="fa fa-eye field-icon" id="toggle-password" style="cursor: pointer;"></i>
 									<div id="password-check"></div>
-
-									<a href="#">Forgot Password?</a>
 								</div>
 
 								<div class="form-group">

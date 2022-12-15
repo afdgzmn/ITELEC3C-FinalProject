@@ -110,8 +110,6 @@ if (isset($_POST['btn_signup'])) {
 									<input type="password" class="form-control" id="confirm-password" name="confirm_password" required placeholder="Confirm Password">
 									<i class="fa fa-eye field-icon" id="toggle-confirm-password" style="cursor: pointer;"></i>
 									<div id="confirm-password-check"></div>
-
-									<a href="#">Forgot Password?</a>
 								</div>
 
 								<div class="form-group">

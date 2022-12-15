@@ -12,7 +12,7 @@ if (!$isAuthenticated) {
 
 $request = array();
 if (isset($_POST['appointment'])) {
-    $request = $controller->cancelAppointment($_POST);
+    $request = $controller->updateAppointment($_POST);
 }
 
 ?>
@@ -193,7 +193,7 @@ if (isset($_POST['appointment'])) {
                                     <th>APPOINTMENT DATE</th>
                                     <th>APPOINTMENT TIME</th>
                                     <th>STATUS</th>
-                                    <th>CANCEL BOOKING</th>
+                                    <th>ACTION</th>
                                 </tr>
 
                                 <?php 
@@ -208,7 +208,7 @@ if (isset($_POST['appointment'])) {
                                                         if ($appointment["status"] == 0) {
                                                             ?> 
                                                                 Pending
-                                                                <td><button class="btn" style="background-color:black; color:white;" value="<?php echo $appointment["uid"]; ?>">Cancel</button></td>
+                                                                <td><button class="btn cancel-appointment" style="background-color:black; color:white;" value="<?php echo $appointment["uid"]; ?>">Cancel</button></td>
                                                             <?php
                                                         }
                                                         elseif ($appointment["status"] == 1) {

@@ -1,3 +1,25 @@
+<?php 
+
+include_once("controllers/AdminDashboardController.php");
+
+session_start();
+$controller = new AdminDashboardController();
+
+$isAuthenticated = $controller::isAuthenticated();
+if (!$isAuthenticated) {
+	header('location: login.php');
+}
+else {
+    $controller->checkIfAdmin();
+}
+
+$request = array();
+if (isset($_POST['appointment'])) {
+    $request = $controller->updateAppointment($_POST);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,33 +52,30 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-</head>
+    <link href="css/my-appointments.css" rel="stylesheet">
 
-<style>
-td, th {
-  text-align: left;
-  padding: 8px;
-}
-th{
-    color:white;
-}
-td{
-    color:black;
-}
-tr:nth-child(even) {
-  background-color: #EFF5FF;
-}
-</style>
-</style>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="lib/wow/wow.min.js" defer></script>
+    <script src="lib/easing/easing.min.js" defer></script>
+    <script src="lib/waypoints/waypoints.min.js" defer></script>
+    <script src="lib/counterup/counterup.min.js" defer></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js" defer></script>
+    <script src="lib/tempusdominus/js/moment.min.js" defer></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js" defer></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js" defer></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js" defer></script>
+    <script src="js/admin-dashboard.js" defer></script>
+</head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
+    
+    <?php include_once('layouts/spinner.php') ?>
+
     <!-- Spinner End -->
 
 
@@ -93,12 +112,14 @@ tr:nth-child(even) {
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
-        <a href="admin-dashboard.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="home.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>WeCare</h1>
         </a>
+
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="admin-dashboard.php" class="nav-item nav-link active">Dashboard</a>
@@ -119,11 +140,37 @@ tr:nth-child(even) {
                 
                 <a href="contact.html" class="nav-item nav-link">Contact</a>-->
             </div>
-            <a href="signin.php" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">LOG IN<i class="fa fa-arrow-right ms-3"></i></a>
+            
+            <?php include_once('layouts/components/session-checker.php') ?>
+
         </div>
     </nav>
     <!-- Navbar End -->
     
+    <div id="approve-modal" class="action-modal">
+        <div class="action-modal-content">
+            <p>Approve this appointment?</p>
+            <div class="action-btns">
+                <input type="hidden" name="action" value="1" form="approveForm">
+                <button class="action-btn" id="approve-btn" type="submit" name="appointment" form="approveForm">Approve</button>
+                <button class="cancel" id="approve-cancel-btn">Cancel</button>
+            </div>
+            <form method="POST" id="approveForm" action=""></form>
+        </div>
+    </div>
+
+    <div id="cancel-modal" class="action-modal">
+        <div class="action-modal-content">
+            <p>Cancel this appointment?</p>
+            <div class="action-btns">
+                <input type="hidden" name="action" value="2" form="cancelForm">
+                <button class="action-btn" id="cancel-btn" type="submit" name="appointment" form="cancelForm">Yes</button>
+                <button class="cancel" id="cancel-cancel-btn">No</button>
+            </div>
+            <form method="POST" id="cancelForm" action=""></form>
+        </div>
+    </div>
+
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -143,41 +190,77 @@ tr:nth-child(even) {
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 100%;">
-            <h1>Patient Request</h1>
-                <table style="width: 100%; color:black; border-collapse: collapse; margin-top:30px;">
-                    <tr style="background-color:#458FF6;">
-                  
-                        <th>PATIENT NAME</th>
-                        <th>APPOINTMENT DATE</th>
-                        <th>APPOINTMENT TIME</th>
-                        <th>STATUS</th>
-                        <th>APPROVED</th>
-                    </tr>
-                    <tr>
-                        <td>Patient's Name</td>
-                        <td>Date</td>
-                        <td>Time</td>
-                        <td>Pending</td>
-                        <td><button class="btn" style="background-color:black; color:white;">Approved</button>
-                        <button class="btn" style="background-color:black; color:white;">Cancel</button></td>
-                    </tr>
-                    <tr>
-                        <td>Patient's Name</td>
-                        <td>Date</td>
-                        <td>Time</td>
-                        <td>Pending</td>
-                        <td><button class="btn" style="background-color:black; color:white;">Approved</button>
-                        <button class="btn" style="background-color:black; color:white;">Cancel</button></td>
-                    </tr>
-                    <tr>
-                        <td>Patient's Name</td>
-                        <td>Date</td>
-                        <td>Time</td>
-                        <td>Pending</td>
-                        <td><button class="btn" style="background-color:black; color:white;">Approved</button>
-                        <button class="btn" style="background-color:black; color:white;">Cancel</button></td>
-                    </tr>
-                </table>
+                <?php
+                    $appointments = $controller->fetchAppointments();
+                    if (empty($appointments)) {
+                        ?> <h3>No appointments found</h3> <?php
+                    }
+                    else {
+                        if (array_key_exists("error", $request)) {
+                            ?> <h3 style="margin-bottom:30px;"> <?php echo $request["error"]; ?> </h3> <?php
+                        }
+
+                        ?>
+                            <h1 style="margin-bottom:30px;">Patient Appointments</h1>
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <tr style="background-color:#458FF6;">
+                                    <th>PATIENT NAME</th>
+                                    <th>APPOINTMENT TO</th>
+                                    <th>APPOINTMENT DATE</th>
+                                    <th>APPOINTMENT TIME</th>
+                                    <th>STATUS</th>
+                                    <th>ACTION</th>
+                                </tr>
+
+                                <?php 
+                                    foreach ($appointments as $appointment) {
+                                        ?>
+                                            <tr>
+                                                <td><?php echo $appointment["patient_last_name"] . ", " . $appointment["patient_first_name"]; ?></td>
+                                                <td><?php echo $appointment["last_name"] . ", " . $appointment["first_name"]; ?></td>
+                                                <td><?php echo date("M d, Y", strtotime($appointment["date"])); ?></td>
+                                                <td><?php echo date("h:iA", strtotime($appointment["start_time"])) . " - " . date("h:iA", strtotime($appointment["end_time"])); ?></td>
+                                                <td>
+                                                    <?php
+                                                        if ($appointment["status"] == 0) {
+                                                            ?> 
+                                                                Pending
+                                                                <td>
+                                                                    <button class="btn approve-appointment" style="background-color:black; color:white;" value="<?php echo $appointment["uid"]; ?>">Approve</button>
+                                                                    <button class="btn cancel-appointment" style="background-color:black; color:white;" value="<?php echo $appointment["uid"]; ?>">Cancel</button>
+                                                                </td>
+                                                            <?php
+                                                        }
+                                                        elseif ($appointment["status"] == 1) {
+                                                            ?> 
+                                                                Approved 
+                                                                <td>
+                                                                    <button class="btn" style="background-color:black; color:white;" disabled>Approve</button>
+                                                                    <button class="btn cancel-appointment" style="background-color:black; color:white;" value="<?php echo $appointment["uid"]; ?>">Cancel</button>
+                                                                </td>
+                                                            <?php
+                                                        }
+                                                        else {
+                                                            ?> 
+                                                                Cancelled 
+                                                                <td>
+                                                                    <button class="btn approve-appointment" style="background-color:black; color:white;" value="<?php echo $appointment["uid"]; ?>">Approve</button>
+                                                                    <button class="btn" style="background-color:black; color:white;" disabled>Cancel</button>
+                                                                </td>
+                                                            <?php
+                                                        }
+                                                    ?>
+                                                </td>
+                                            </tr>
+                                        <?php
+                                    }
+                                ?>
+
+                            </table>
+                            
+                        <?php
+                    }
+                ?>
                         
                         <!--<div class="row g-3">
 
@@ -218,91 +301,20 @@ tr:nth-child(even) {
                    
             </div>
         </div>
-    </div>
-                        
-                
-                
-             
+    </div>         
        
     <!-- Appointment End -->
     
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">WeCare</h5>
-                    <p class="mb-2">WeCare provides professional help, affordable healthcare, accessible, and online to all. </p>
-                    <!--<p class="mb-2">Your health comes first, because we care about you.</p>-->
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Address</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Las Piñas, Alabang Zapote Rd</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+639 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>WeCare@gmail.com</p>
-                    <!--
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>-->
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <!--<h5 class="text-light mb-4">Services</h5>
-                    <a class="btn btn-link" href="">Cardiology</a>
-                    <a class="btn btn-link" href="">Pulmonary</a>
-                    <a class="btn btn-link" href="">Neurology</a>
-                    <a class="btn btn-link" href="">Orthopedics</a>
-                    <a class="btn btn-link" href="">Laboratory</a>-->
-
-                    <h5 class="text-light mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="">Our Doctors</a>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Consult Now</a>
-                </div>
-                <!--<div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Newsletter</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>-->
-            </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">WeCare</a>, All Right Reserved.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+    <?php include_once('layouts/footer.php') ?>
+    
     <!-- Footer End -->
 
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
 </body>
 
 </html>

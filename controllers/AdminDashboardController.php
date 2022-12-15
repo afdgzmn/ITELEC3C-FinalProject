@@ -1,18 +1,29 @@
 <?php
 
-require_once('models/Database.php');
-require_once('controllers/Controller.php');
-require_once('interfaces/AppointmentsInterface.php');
+include_once('models/Database.php');
+include_once('controllers/Controller.php');
+include_once('interfaces/AppointmentsInterface.php');
 
-class AppointmentsController extends Controller implements AppointmentsInterface { 
+class AdminDashboardController extends Controller implements AppointmentsInterface { 
     /**
-     * Fetch appointments of user
+     * Checks if logged-in user is an admin
+     */
+    function checkIfAdmin() {
+        $usertype = $_SESSION["user_type"];
+        if ($usertype != 0) {
+            return header("location: home.php");
+        }
+    }
+
+    /**
+     * Fetch appointments from users
      */
     function fetchAppointments() {
-        $uid = $_SESSION["uid"];
         $query = 
             "SELECT 
                 appointments.uid,
+                appointments.first_name as patient_first_name,
+                appointments.last_name as patient_last_name,
                 doctors.first_name, 
                 doctors.last_name, 
                 appointments.date, 
@@ -22,7 +33,7 @@ class AppointmentsController extends Controller implements AppointmentsInterface
             FROM appointments 
             INNER JOIN doctor_schedules ON appointments.schedule_id = doctor_schedules.uid
             INNER JOIN doctors ON doctor_schedules.doctor_id = doctors.uid
-            WHERE user_id = '{$uid}'";
+            ORDER BY appointments.date ASC";
 
         $result = mysqli_query($this->getDatabase()->getConnection(), $query);
         if (!$result) {
@@ -39,14 +50,31 @@ class AppointmentsController extends Controller implements AppointmentsInterface
 
     /**
      * Update appointment
+     * Status 1: Approve
      * Status 2: Cancel
      * @param request: HTTP Post request
      */
     function updateAppointment(Array $request) {
         $uid = $this::sanitize($request["appointment"]);
+        $action = $this::sanitize($request["action"]);
+        $status = 0;
+        switch ($action) {
+            case 1: 
+                $status = 1;
+                break;
+
+            case 2:
+                $status = 2;
+                break;
+
+            default:
+                $status = 0;
+                break;
+        }
+
         $query = 
             "UPDATE appointments
-            SET status = 2
+            SET status = '{$status}'
             WHERE uid = '{$uid}'";
 
         $result = mysqli_query($this->getDatabase()->getConnection(), $query);
@@ -54,7 +82,7 @@ class AppointmentsController extends Controller implements AppointmentsInterface
             return array("error" => "Database error");
         }
 
-        return header("location: my-appointments.php");
+        return header("location: admin-dashboard.php");
     }
 }
 

@@ -1,10 +1,11 @@
 <?php
 
-include_once('models/User.php');
-include_once('models/Database.php');
-include_once('controllers/Controller.php');
+require_once('models/User.php');
+require_once('models/Database.php');
+require_once('controllers/Controller.php');
+require_once('interfaces/AuthInterface.php');
 
-class SignupController extends Controller {
+class SignupController extends Controller implements AuthInterface {
     /**
      * Sanitize data, validate first name, last name, email, and password
      * @param request: POST request
@@ -49,7 +50,7 @@ class SignupController extends Controller {
             uniqid(),
             $first_name, 
             $last_name,
-            2,
+            1,
             $email,
             $hashed_password,
         );
@@ -107,7 +108,18 @@ class SignupController extends Controller {
             return array("Could not register user, please try again");
         } 
 
-        $_SESSION['uid'] = $user->getUid();
+        $result = login($user->getUid(), $user->getUserType());
+        return $result;
+    }
+
+    /**
+     * Login user by setting user uid as session id
+     * @param uid
+     * @param usertype
+     */
+    function login($uid, $user_type) {
+        $_SESSION['uid'] = $uid;
+        $_SESSION["user_type"] = $user_type;
         return header("location: home.php");
     }
 } 

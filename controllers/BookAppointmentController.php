@@ -1,10 +1,9 @@
 <?php
 
-include_once('models/Appointment.php');
-include_once('models/Database.php');
-include_once('models/PatientInformation.php');
-include_once('controllers/Controller.php');
-include_once('interfaces/DoctorsInterface.php');
+require_once('models/Appointment.php');
+require_once('models/Database.php');
+require_once('controllers/Controller.php');
+require_once('interfaces/DoctorsInterface.php');
 
 class BookAppointmentController extends Controller implements DoctorsInterface {
     /**

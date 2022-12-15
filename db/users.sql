@@ -2,7 +2,7 @@ create table users(
     uid VARCHAR (255) NOT NULL,
     first_name VARCHAR (255) NOT NULL,
     last_name VARCHAR (255) NOT NULL,
-    user_type INT (5) NOT NULL,
+    user_type INT (1) NOT NULL,
     email VARCHAR (255) NOT NULL,
     password VARCHAR (255) NOT NULL,
     created_at TIMESTAMP DEFAULT current_timestamp,

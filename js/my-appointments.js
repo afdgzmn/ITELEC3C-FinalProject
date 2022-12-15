@@ -1,5 +1,4 @@
-$(".btn").click(function() {
-    console.log("click")
+$(".cancel-appointment").click(function() {
     $("#cancel-modal").fadeIn("fast")
     let btn = $(this).val()
     let element = document.getElementById("cancel-btn")
