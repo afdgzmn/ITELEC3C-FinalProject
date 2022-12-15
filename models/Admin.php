@@ -1,6 +1,8 @@
 <?php
 
-class User {
+include_once('abstracts/AbstractUser.php');
+
+class Admin extends AbstractUser {
     private $uid;
     private $first_name;
     private $last_name;
@@ -17,29 +19,12 @@ class User {
         $this->password = $password;
     }
 
-    function getUid() {
-        return $this->uid;
-    }
-
-    function getFirstName() {
-        return $this->first_name;
-    }
-
-    function getLastName() {
-        return $this->last_name;
-    }
-
-    function getUserType() {
-        return $this->user_type;
-    }
-
-    function getEmail() {
-        return $this->email;
-    }
-
-    function getPassword() {
-        return $this->password;
+    /**
+     * Login user as admin by setting user uid as session id
+     */
+    function login() {
+        $_SESSION['uid'] = $this->uid;
+        return header('location: admin-home.php');
     }
 }
-
 ?>

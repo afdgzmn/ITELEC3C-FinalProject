@@ -1,12 +1,11 @@
 <?php
 
-class HomeController {
+include_once('controllers/Controller.php');
 
-    /**
-     * Checks if user is logged in
-     */
-    function isAuthenticated() {
-        return (isset($_SESSION['uid'])) ? true : false;
+class HomeController extends Controller {
+
+    function ourDoctors() {
+        return 'our-doctors.php?specialization="allergology"';
     }
 } 
 ?>

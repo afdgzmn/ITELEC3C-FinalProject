@@ -1,11 +1,16 @@
 <?php
 
 include_once("controllers/LoginController.php");
+
+session_start();
 $controller = new LoginController();
-$isAuthenticated = $controller->isAuthenticated();
+
+$isAuthenticated = $controller::isAuthenticated();
+if ($isAuthenticated) {
+	header('location: home.php');
+}
 
 $errors = array();
-
 if (isset($_POST['btn_login'])) {
     $errors = $controller->validateData($_POST);
 }
@@ -22,6 +27,7 @@ if (isset($_POST['btn_login'])) {
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/signin.css">
+	<script src="js/login.js" defer></script>
 </head>
 
 <body>
@@ -50,7 +56,7 @@ if (isset($_POST['btn_login'])) {
 						<div class="login-wrap p-4 p-md-5">
 							<div class="d-flex">
 								<div class="w-100">
-									<h3 class="mb-4">Sign In</h3>
+									<h3 class="mb-4">Log In</h3>
 								</div>
 
 								<div class="w-100">
@@ -66,7 +72,41 @@ if (isset($_POST['btn_login'])) {
 							</div>
 						
 							<!-- Login form -->
-							<?php include_once('layouts/components/login_form.php') ?>
+							<form method="POST" action="" class="signin-form">
+								<div class="form-group mb-3">
+									<?php 
+										if (!empty($errors)) {
+											?>
+											<p class="error">
+												<?php 
+													foreach ($errors as $error) {
+														echo $error;
+													}
+												?>
+											</p>
+											<?php 
+										}
+									?>
+
+									<label class="label" for="name">Email</label>
+									<input type="text" class="form-control" id="email" name="email" required placeholder="Email">
+									<div id="email-check"></div>
+
+									<label class="label" for="name">Password</label>
+									<input type="password" class="form-control" id="password" name="password" required placeholder="Password">
+									<i class="fa fa-eye field-icon" id="toggle-password" style="cursor: pointer;"></i>
+									<div id="password-check"></div>
+
+									<a href="#">Forgot Password?</a>
+								</div>
+
+								<div class="form-group">
+									<button type="submit" class="form-control btn btn-primary rounded submit px-3" id="btn-submit" name="btn_login">Log In</button>
+								</div>
+
+							</form>
+
+							<p class="text-center">Not a member? <a data-toggle="tab" href="signup.php">Sign Up</a></p>
 
 						</div>
 					</div>
@@ -74,12 +114,6 @@ if (isset($_POST['btn_login'])) {
 			</div>
 		</div>
 	</section>
-
-	<script src="js/jquery.min.js"></script>
-	<script src="js/popper.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/login.js"></script>
 
 </body>
 

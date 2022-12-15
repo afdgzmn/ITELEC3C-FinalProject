@@ -103,7 +103,7 @@ tr:nth-child(even) {
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="admin-dashboard.php" class="nav-item nav-link active">Dashboard</a>
                 <!--<a href="doctor-allergology.php" class="nav-item nav-link">Our Doctors</a>
-                <a href="about.php" class="nav-item nav-link">About Us</a>
+                <a href="about-us.php" class="nav-item nav-link">About Us</a>
                 <a href="service.php" class="nav-item nav-link">Our Services</a>
                 
                 <div class="nav-item dropdown">

@@ -1,27 +1,26 @@
 const email_format = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 const password_format = /^.*(?=.{8,20})(?=.*[a-z])(?=.*[0-9])(?=.*[\d\x])(?=.*[@$!%*#?&)(^_=+-]).*$/
 
-var first_name = document.getElementById('first-name')
-var last_name = document.getElementById('last-name')
-var email = document.getElementById('email')
-var password = document.getElementById('password')
-var confirm_password = document.getElementById('confirm-password')
-var toggle_icon = document.getElementById('toggle-password')
-var toggle_icon_confirm = document.getElementById('toggle-confirm-password')
-var btn_submit = document.getElementById('btn-submit')
+const first_name = document.getElementById("first-name")
+const last_name = document.getElementById("last-name")
+const email = document.getElementById("email")
+const password = document.getElementById("password")
+const confirm_password = document.getElementById("confirm-password")
+const toggle_icon = document.getElementById("toggle-password")
+const toggle_icon_confirm = document.getElementById("toggle-confirm-password")
+const btn_submit = document.getElementById("btn-submit")
 
-var validation = new Map([
-    ['first_name', false],
-    ['last_name', false],
-    ['email', false],
-    ['password', false],
-    ['confirm_password', false]
+let validation = new Map([
+    ["first_name", false],
+    ["last_name", false],
+    ["email", false],
+    ["password", false],
+    ["confirm_password", false]
 ])
 
 first_name.onkeyup = function() {
     validateFirstName(this.value)
 }
-
 first_name.onchange = function() {
     validateFirstName(this.value)
 }
@@ -29,7 +28,6 @@ first_name.onchange = function() {
 last_name.onkeyup = function() {
     validateLastName(this.value)
 }
-
 last_name.onchange = function() {
     validateLastName(this.value)
 }
@@ -37,7 +35,6 @@ last_name.onchange = function() {
 email.onkeyup = function() {
     validateEmail(this.value)
 }
-
 email.onchange = function() {
     validateEmail(this.value)
 }
@@ -45,7 +42,6 @@ email.onchange = function() {
 password.onkeyup =  function() {
     validatePassword(this.value)
 }
-
 password.onchange =  function() {
     validatePassword(this.value)
 }
@@ -53,7 +49,6 @@ password.onchange =  function() {
 confirm_password.onkeyup = function() {
     validateConfirmPassword(this.value)
 }
-
 confirm_password.onchange = function() {
     validateConfirmPassword(this.value)
 }
@@ -73,22 +68,22 @@ btn_submit.onclick = function() {
 function validateFirstName(value) {
     if (value === "" || value == null) {
         document.getElementById("first-name-check").innerHTML = "Please enter your first name"
-        validation.set('first_name', false)
+        validation.set("first_name", false)
     }
     else {
         document.getElementById("first-name-check").innerHTML = ""
-        validation.set('first_name', true)
+        validation.set("first_name", true)
     }
 }
 
 function validateLastName(value) {
     if (value === "" || value == null) {
         document.getElementById("last-name-check").innerHTML = "Please enter your last name"
-        validation.set('last_name', false)
+        validation.set("last_name", false)
     }
     else {
         document.getElementById("last-name-check").innerHTML = ""
-        validation.set('last_name', true)
+        validation.set("last_name", true)
     }
 }
 
@@ -99,11 +94,11 @@ function validateEmail(value) {
     else {
         if (!value.match(email_format)) {
             document.getElementById("email-check").innerHTML = "Please enter a valid email"
-            validation.set('email', false)
+            validation.set("email", false)
         }
         else {
             document.getElementById("email-check").innerHTML = ""
-            validation.set('email', true)
+            validation.set("email", true)
         }
     }
 }
@@ -113,23 +108,23 @@ function validatePassword(value) {
         document.getElementById("password-check").innerHTML = "Please enter your password";
     }
     else {
-        document.getElementById('password-check').innerHTML = ""
+        document.getElementById("password-check").innerHTML = ""
         if (!value.match(password_format)) {
             document.getElementById("password-check").innerHTML = "Password must contain at least one number and one special character"
-            validation.set('password', false)
+            validation.set("password", false)
         }
         else {
             document.getElementById("password-check").innerHTML = ""
-            validation.set('password', true)
+            validation.set("password", true)
             
             if(confirm_password.value != "") {
                 if (confirm_password.value != value) {
                     document.getElementById("confirm-password-check").innerHTML = "Passwords do not match"
-                    validation.set('confirm_password', false)
+                    validation.set("confirm_password", false)
                 }
                 else {
                     document.getElementById("confirm-password-check").innerHTML = ""
-                    validation.set('confirm_password', true)
+                    validation.set("confirm_password", true)
                 }
             }
         }
@@ -141,25 +136,25 @@ function validateConfirmPassword(value) {
         document.getElementById("confirm-password-check").innerHTML = "Please confirm your password"		
     }
     else {
-        document.getElementById('confirm-password-check').innerHTML = ""
+        document.getElementById("confirm-password-check").innerHTML = ""
         if (!value.match(password.value)) {
             document.getElementById("confirm-password-check").innerHTML = "Passwords do not match"
-            validation.set('confirm_password', false)
+            validation.set("confirm_password", false)
         }
         else {
             document.getElementById("confirm-password-check").innerHTML = ""
-            validation.set('confirm_password', true)
+            validation.set("confirm_password", true)
         }
     }
 }
 
 function togglePassword(element, input) {
     // toggle the type attribute
-    const type = input.getAttribute('type') === 'password' ? 'text' : 'password'
-    input.setAttribute('type', type)
+    const type = input.getAttribute("type") === "password" ? "text" : "password"
+    input.setAttribute("type", type)
 
     // toggle the eye slash icon
-    element.classList.toggle('fa-eye-slash')
+    element.classList.toggle("fa-eye-slash")
 }
 
 function validateData() {
