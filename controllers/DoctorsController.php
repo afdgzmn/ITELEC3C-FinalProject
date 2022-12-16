@@ -11,7 +11,7 @@ class DoctorsController extends Controller implements DoctorsInterface {
      */
     function fetchDoctors(Array $request) {
         $specialization = $request['specialization'];
-        $query = "SELECT * FROM doctors WHERE root_specialization LIKE '%{$specialization}%'";
+        $query = "SELECT * FROM doctors WHERE root_specialization LIKE '%{$specialization}%' ORDER BY last_name ASC";
         
         $result = mysqli_query($this->getDatabase()->getConnection(), $query);
         if (!$result) {
@@ -31,7 +31,7 @@ class DoctorsController extends Controller implements DoctorsInterface {
      * @param doctor_id: Doctor uid
      */
     function fetchDoctorSchedules($doctor_id) {
-        $query = "SELECT * FROM doctor_schedules WHERE doctor_id = '{$doctor_id}'";
+        $query = "SELECT * FROM doctor_schedules WHERE doctor_id = '{$doctor_id}' ORDER BY day ASC";
 
         $result = mysqli_query($this->getDatabase()->getConnection(), $query);
         if (!$result) {

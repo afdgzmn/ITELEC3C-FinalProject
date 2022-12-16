@@ -77,37 +77,6 @@ if (isset($_POST['btn_book_appointment'])) {
     <!-- Spinner End -->
 
 
-    <!-- Topbar Start 
-    <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
-                    <small>123 Street, New York, USA</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                    <small class="far fa-clock text-primary me-2"></small>
-                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
-                </div>
-            </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+012 345 6789</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-     -->
-
-
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
         <a href="home.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
@@ -126,19 +95,6 @@ if (isset($_POST['btn_book_appointment'])) {
                 <a href="our-services.php" class="nav-item nav-link">Our Services</a>
                 <a href="my-appointments.php" class="nav-item nav-link">My Appointments</a>
                 <a href="consult.php" class="nav-item nav-link active">Consult Now</a>
-                <!--
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                        <a href="feature.html" class="dropdown-item">Feature</a>
-                        <a href="team.html" class="dropdown-item">Our Doctor</a>
-                        <a href="appointment.html" class="dropdown-item">Appointment</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
-                </div>
-                
-                <a href="contact.html" class="nav-item nav-link">Contact</a>-->
             </div>
 
             <?php include_once('layouts/components/session-checker.php') ?>
@@ -152,13 +108,6 @@ if (isset($_POST['btn_book_appointment'])) {
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <h1 class="display-3 text-white mb-3 animated slideInDown">Consultation</h1>
-            <!--<nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb text-uppercase mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">About</li>
-                </ol>
-            </nav>-->
         </div>
     </div>
     <!-- Page Header End -->    
@@ -222,15 +171,6 @@ if (isset($_POST['btn_book_appointment'])) {
                                         <div style="text-align:left; color: #FF0000;" id="date-of-birth-check"></div>
                                     </div>
                                 </div>
-
-                                    <!--<div class="col-12 col-sm-6" style="margin-top:30px">
-                                        <h5 style="text-align:left; margin-bottom:15px">Date of Birth</h5>
-                                        <div class="date" id="date" data-target-input="nearest">
-                                            <input type="date"
-                                                class="form-control border-0 datetimepicker-input"
-                                                placeholder="Date of Birth" data-target="#date" data-toggle="datetimepicker" style="height: 55px;">
-                                        </div>
-                                    </div>-->
 
                                 <div class="col-12 col-sm-6" style="margin-top:30px">
                                     <h5 style="text-align:left; margin-bottom:15px">Sex</h5>

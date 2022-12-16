@@ -79,37 +79,6 @@ if (isset($_POST['appointment'])) {
     <!-- Spinner End -->
 
 
-    <!-- Topbar Start 
-    <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
-                    <small>123 Street, New York, USA</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                    <small class="far fa-clock text-primary me-2"></small>
-                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
-                </div>
-            </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+012 345 6789</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-     -->
-
-
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
         <a href="home.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
@@ -123,22 +92,6 @@ if (isset($_POST['appointment'])) {
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="admin-dashboard.php" class="nav-item nav-link active">Dashboard</a>
-                <!--<a href="doctor-allergology.php" class="nav-item nav-link">Our Doctors</a>
-                <a href="about-us.php" class="nav-item nav-link">About Us</a>
-                <a href="service.php" class="nav-item nav-link">Our Services</a>
-                
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                        <a href="feature.html" class="dropdown-item">Feature</a>
-                        <a href="team.html" class="dropdown-item">Our Doctor</a>
-                        <a href="appointment.html" class="dropdown-item">Appointment</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
-                </div>
-                
-                <a href="contact.html" class="nav-item nav-link">Contact</a>-->
             </div>
             
             <?php include_once('layouts/components/session-checker.php') ?>
@@ -175,17 +128,11 @@ if (isset($_POST['appointment'])) {
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <h1 class="display-3 text-white mb-3 animated slideInDown">Dashboard</h1>
-            <!--<nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb text-uppercase mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">About</li>
-                </ol>
-            </nav>-->
         </div>
     </div>
     <!-- Page Header End -->    
 
+    
     <!-- Appointment Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -261,49 +208,13 @@ if (isset($_POST['appointment'])) {
                         <?php
                     }
                 ?>
-                        
-                        <!--<div class="row g-3">
-
-                            <div class="col-lg-6 rounded bg-light" style="padding:20px; width:48%; margin-right:10px;">
-                                <p class="d-inline-block border rounded-pill py-1 px-4">Allergology</p>    
-                                <h5 class="mb-0">Agustin, Jenifer</h5><br>
-                                <h6>Clinic Schedule</h6>
-                                <table style="width: 100%;">
-                                    <tr>
-                                        <td>Tuesday</td>
-                                        <td>02:00 PM - 04:00 PM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Saturday</td>
-                                        <td>02:00 PM - 04:00 PM</td>
-                                    </tr>
-                                </table>
-                                <button onclick="window.location.href='slot-Agustin.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
-                            </div>
-
-                            <div class="col-lg-6 rounded bg-light" style="padding:20px; width:48%; margin-right:10px;">
-                                <p class="d-inline-block border rounded-pill py-1 px-4">Allergology</p>    
-                                <h5 class="mb-0">Yapjuangco, Celine</h5><br>
-                                <h6>Clinic Schedule</h6>
-                                <table style="width: 100%;">
-                                    <tr>
-                                        <td>Wednesday</td>
-                                        <td>11:00 AM - 02:00 PM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Friday</td>
-                                        <td>01:00 PM - 03:00 PM</td>
-                                    </tr>
-                                </table>
-                                <button onclick="window.location.href='slot-Yapjuangco.php'" class="btn btn-primary w-100 py-3" type="submit" style="margin-top:20px">Book Appointment</button>
-                            </div>
-                        </div>-->
                    
             </div>
         </div>
     </div>         
        
     <!-- Appointment End -->
+    
     
     <!-- Footer Start -->
     

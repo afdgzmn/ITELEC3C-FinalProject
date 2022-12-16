@@ -239,7 +239,7 @@ function validateData() {
         document.getElementById("date-of-birth-check").innerHTML = "Please select your date of birth"
     }
 
-    if (sex.value != 1 || sex.value != 2) {
+    if (sex.value != "true" && sex.value != "false") {
         document.getElementById("sex-check").innerHTML = "Please select your sex"
     }
 

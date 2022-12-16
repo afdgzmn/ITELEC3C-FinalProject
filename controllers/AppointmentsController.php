@@ -22,7 +22,8 @@ class AppointmentsController extends Controller implements AppointmentsInterface
             FROM appointments 
             INNER JOIN doctor_schedules ON appointments.schedule_id = doctor_schedules.uid
             INNER JOIN doctors ON doctor_schedules.doctor_id = doctors.uid
-            WHERE user_id = '{$uid}'";
+            WHERE user_id = '{$uid}'
+            ORDER BY appointments.date ASC";
 
         $result = mysqli_query($this->getDatabase()->getConnection(), $query);
         if (!$result) {

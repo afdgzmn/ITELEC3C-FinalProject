@@ -35,17 +35,9 @@ if (isset($_POST['btn_signup'])) {
   	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
-				<!--<div class="col-md-6 text-center mb-5">
-				<h2 class="heading-section">Login #04</h2>
-				</div>-->
-			</div>
-
-			<div class="row justify-content-center">
 				<div class="col-md-12 col-lg-10">
 					<div class="wrap d-md-flex">
 						<div class="img" style="background: linear-gradient(212.38deg, rgba(150, 141, 248, 0.7) 0%, rgba(60, 49, 190, 0.71) 100%),url(img/doctor.jpg) 70%;">
-						<!--<p class="desc">WeCare</p>
-										<p class="desc">Your health comes first, because we care about you.</p>-->
 							<div class="right">
 								<div class="right-text">
 									<h2>WeCare</h2>
@@ -62,11 +54,9 @@ if (isset($_POST['btn_signup'])) {
 
 								<div class="w-100">
 									<p class="social-media d-flex justify-content-end">
-										<a href="home.php" class="social-icon d-flex align-items-center justify-content-center"><span
-											class="fa fa-home"></span></a>
-
-										<!--<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
-															<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>-->
+										<a href="home.php" class="social-icon d-flex align-items-center justify-content-center">
+											<span class="fa fa-home"></span>
+										</a>
 									</p>
 								</div>
 								
@@ -78,7 +68,7 @@ if (isset($_POST['btn_signup'])) {
 									<?php 
 										if (!empty($errors)) {
 											?>
-											<p class="error">
+											<p class="error" style="color: #FF0000">
 												<?php 
 													foreach ($errors as $error) {
 														echo $error;

@@ -38,6 +38,21 @@ session_start();
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="lib/wow/wow.min.js" defer></script>
+    <script src="lib/easing/easing.min.js" defer></script>
+    <script src="lib/waypoints/waypoints.min.js" defer></script>
+    <script src="lib/counterup/counterup.min.js" defer></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js" defer></script>
+    <script src="lib/tempusdominus/js/moment.min.js" defer></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js" defer></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js" defer></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -46,37 +61,6 @@ session_start();
     <?php include_once('layouts/spinner.php') ?>
 
     <!-- Spinner End -->
-
-
-    <!-- Topbar Start 
-    <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-7 px-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
-                    <small>123 Street, New York, USA</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                    <small class="far fa-clock text-primary me-2"></small>
-                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
-                </div>
-            </div>
-            <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+012 345 6789</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-     -->
 
 
     <!-- Navbar Start -->
@@ -97,19 +81,6 @@ session_start();
                 <a href="our-services.php" class="nav-item nav-link">Our Services</a>
                 <a href="my-appointments.php" class="nav-item nav-link">My Appointments</a>
                 <a href="consult.php" class="nav-item nav-link">Consult Now</a>
-                <!--
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                        <a href="feature.html" class="dropdown-item">Feature</a>
-                        <a href="team.html" class="dropdown-item">Our Doctor</a>
-                        <a href="appointment.html" class="dropdown-item">Appointment</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
-                </div>
-                
-                <a href="contact.html" class="nav-item nav-link">Contact</a>-->
             </div>
             
             <?php include_once('layouts/components/session-checker.php') ?>
@@ -122,16 +93,10 @@ session_start();
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
-            <!--<nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb text-uppercase mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">About</li>
-                </ol>
-            </nav>-->
         </div>
     </div>
     <!-- Page Header End -->    
+
 
     <!-- Header Start -->
     <div class="container-fluid header p-0 mb-5">
@@ -141,53 +106,12 @@ session_start();
                 <h1 class="display-4 mb-4">WeCare Medical Center</h1>
                 <p class="mb-4" >It is one of the best-equipped Level 3 medical centers in Southern Metro Manila with a bed capacity of 215. For almost 45 years now, WeCare Medical Center has provided exemplary medical care to the South’s increasing population and rapidly growing communities. WeCare Medical Center utilizes the dynamic combination of credentialed and highly trained physicians who are experts in their specialties, competent nurses and other allied medical personnel, and the most advanced tools of medicine available to achieve quality diagnoses, treatments, and patient care.</p>
                 <br><br>
-                <!--<p class="text-light mb-0" style="font-size:23px">Your health comes first, because we care about you.</p>
-                <br><br><br><br>-->
-                
-                <div class="row g-4">
-                    <!--<div class="col-sm-4">
-                        <div class="border-start border-light ps-4">
-                            <h2 class="text-white mb-1" data-toggle="counter-up">123</h2>
-                            <p class="text-light mb-0">Expert Doctors</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="border-start border-light ps-4">
-                            <h2 class="text-white mb-1" data-toggle="counter-up">1234</h2>
-                            <p class="text-light mb-0">Equipments</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="border-start border-light ps-4">
-                            <h2 class="text-white mb-1" data-toggle="counter-up">12345</h2>
-                            <p class="text-light mb-0">Total Patients</p>
-                        </div>
-                    </div>-->
-                </div>
             </div>
+
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                 <div class="owl-carousel header-carousel">
                     <div class="owl-carousel-item position-relative">
                         <img class="img-fluid" src="img/hospital.jpg" alt="">
-                        <!--
-                        <div class="owl-carousel-text">
-                            <h1 class="display-1 text-white mb-0">Cardiology</h1>
-                        </div>
-                    </div>
-                    <div class="owl-carousel-item position-relative">
-                        <img class="img-fluid" src="img/carousel-2.jpg" alt="">
-                        
-                        <div class="owl-carousel-text">
-                            <h1 class="display-1 text-white mb-0">Neurology</h1>
-                        </div>
-                    
-                    </div>
-                    <div class="owl-carousel-item position-relative">
-                        <img class="img-fluid" src="img/carousel-3.jpg" alt="">
-                        
-                        <div class="owl-carousel-text">
-                            <h1 class="display-1 text-white mb-0">Pulmonary</h1>
-                        </div>-->
                     </div>
                 </div>
             </div>
@@ -214,71 +138,47 @@ session_start();
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <!--<p class="d-inline-block border rounded-pill py-1 px-4">Services</p>-->
                 <h1>Dedicated to Life</h1>
                 <p class="display-7 mb-4">WeCare Medical Center is committed to provide quality healthcare services by:</p>
             </div>
+
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item bg-light rounded h-100 p-5">
-                        <!--<div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
-                            <i class="fa fa-search text-primary fs-4"></i>
-                        </div>
-                        <h4 class="mb-3">Search Doctor</h4>-->
                         <h5 class="dedicate">Updating with the latest health care technology</h5>
-                        <!--<a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>-->
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item bg-light rounded h-100 p-5">
-                        <!--<div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
-                            <i class="fa fa-prescription text-primary fs-4"></i>
-                        </div>
-                        <h4 class="mb-3">Consultation</h4>-->
                         <h5 class="dedicate">Providing consistent customer satisfaction</h5>
-                        <!--<a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>-->
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item bg-light rounded h-100 p-5">
-                        <!--<div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
-                            <i class="fa fa-file-alt text-primary fs-4"></i>
-                        </div>
-                        <h4 class="mb-3">Details Information</h4>-->
                         <h5 class="dedicate">Helping our community through our corporate social responsibility</h5>
-                        <!--<a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>-->
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item bg-light rounded h-100 p-5">
-                        <!--<div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
-                            <i class="fa fa-briefcase-medical text-primary fs-4"></i>
-                        </div>
-                        <h4 class="mb-3">Emergency Care</h4>-->
                         <h5 class="dedicate">Delivering medical Services appropriate to patients' need</h5>
-                        <!--<a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>-->
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item bg-light rounded h-100 p-5">
-                        <!--<div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
-                            <i class="fa fa-book-medical text-primary fs-4"></i>
-                        </div>
-                        <h4 class="mb-3">Tracking</h4>-->
                         <h5 class="dedicate">Meeting relevant statutory and regulatory requirements</h5>
-                        <!--<a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>-->
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item bg-light rounded h-100 p-5">
-                        <!--<div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
-                            <i class="fa fa-x-ray text-primary fs-4"></i>
-                        </div>
-                        <h4 class="mb-3">Lab Result Interpretation</h4>-->
                         <h5 class="dedicate">Continually improving our performance</h5>
-                        <!--<a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>-->
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -290,7 +190,6 @@ session_start();
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <!--<p class="d-inline-block border rounded-pill py-1 px-4">Doctors</p>-->
                 <h1>About the Team</h1>
             </div>
             <div class="row g-4">
@@ -302,11 +201,6 @@ session_start();
                         <div class="team-text bg-light text-center p-4">
                             <h5>Alora Fae M. De Guzman</h5>
                             <p class="text-primary">Project Manager</p>
-                            <!--<div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -318,11 +212,6 @@ session_start();
                         <div class="team-text bg-light text-center p-4">
                             <h5 style="margin-top:25px">Shaina C. Yu</h5>
                             <p class="text-primary">Front-End Developer</p>
-                            <!--<div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -334,11 +223,6 @@ session_start();
                         <div class="team-text bg-light text-center p-4">
                             <h5>Kean Aylward B. Cabel</h5>
                             <p class="text-primary">Back-End Developer</p>
-                            <!--<div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -350,11 +234,6 @@ session_start();
                         <div class="team-text bg-light text-center p-4">
                             <h5>Jan William Serge C. Pancho</h5>
                             <p class="text-primary">Back-End Developer</p>
-                            <!--<div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -366,11 +245,6 @@ session_start();
                         <div class="team-text bg-light text-center p-4">
                             <h5>Micah Jobel M. Bantog</h5>
                             <p class="text-primary">QA Officer</p>
-                            <!--<div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -390,21 +264,6 @@ session_start();
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
 </body>
 
 </html>

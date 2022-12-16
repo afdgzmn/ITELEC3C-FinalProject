@@ -29,7 +29,7 @@ class ConsultController extends Controller implements DoctorsInterface {
      * @param doctor_id: Doctor uid
      */
     function fetchDoctorSchedules($doctor_id) {
-        $query = "SELECT * FROM doctor_schedules WHERE doctor_id = '{$doctor_id}'";
+        $query = "SELECT * FROM doctor_schedules WHERE doctor_id = '{$doctor_id}' ORDER BY day ASC";
 
         $result = mysqli_query($this->getDatabase()->getConnection(), $query);
         if (!$result) {
