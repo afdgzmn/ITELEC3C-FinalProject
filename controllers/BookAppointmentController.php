@@ -11,8 +11,8 @@ class BookAppointmentController extends Controller implements DoctorsInterface {
      * @param request: HTTP GET request
      */
     function fetchDoctors(Array $request) {
-        $uid = $request['doctor'];
-        $query = "SELECT * FROM doctors WHERE uid = '{$uid}'";
+        $doctor_id = $request['doctor'];
+        $query = "SELECT * FROM doctors WHERE uid = '{$doctor_id}'";
         
         $result = mysqli_query($this->getDatabase()->getConnection(), $query);
         if (!$result) {
@@ -132,7 +132,6 @@ class BookAppointmentController extends Controller implements DoctorsInterface {
         }
 
         $appointment = new Appointment(
-            uniqid(),
             $_SESSION["uid"],
             $schedule_id,
             $date,
@@ -178,7 +177,6 @@ class BookAppointmentController extends Controller implements DoctorsInterface {
     function bookAppointment(Appointment $appointment) {
         $query =
             "INSERT INTO appointments(
-                uid, 
                 user_id, 
                 schedule_id, 
                 date, 
@@ -192,7 +190,6 @@ class BookAppointmentController extends Controller implements DoctorsInterface {
                 mobile_number
             )
             VALUES(
-                '{$appointment->getUid()}', 
                 '{$appointment->getUserId()}', 
                 '{$appointment->getScheduleId()}',
                 '{$appointment->getDate()}',

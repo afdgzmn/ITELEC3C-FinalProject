@@ -1,5 +1,5 @@
 create table users(
-    uid VARCHAR (255) NOT NULL,
+    uid INT NOT NULL AUTO_INCREMENT,
     first_name VARCHAR (255) NOT NULL,
     last_name VARCHAR (255) NOT NULL,
     user_type INT (1) NOT NULL,
@@ -10,9 +10,8 @@ create table users(
     PRIMARY KEY(uid)
 );
 
-insert into users(uid, first_name, last_name, user_type, email, password)
+insert into users(first_name, last_name, user_type, email, password)
 values(
-    uuid(),
     "wecare",
     "wecare",
     0,

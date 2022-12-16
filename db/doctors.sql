@@ -1,8 +1,8 @@
 create table doctors(
-    uid VARCHAR (255) NOT NULL,
+    uid INT NOT NULL AUTO_INCREMENT,
     first_name VARCHAR (255) NOT NULL,
     last_name VARCHAR (255) NOT NULL,
-    root_specializatoin VARCHAR (255),
+    root_specialization VARCHAR (255),
     primary_specialization VARCHAR (255),
     secondary_specialization VARCHAR (255),
     local_number INT (10),
@@ -16,11 +16,11 @@ create table doctors(
 
 
 -- Allergology
-insert into doctors(uid, first_name, last_name, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
+insert into doctors(first_name, last_name, root_specialization, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
 values(
-    uuid(),
     "Jenifer Otadoy", 
     "Agustin",
+    "Allergology",
     "Internal Medicine",
     "Allergology and Immunology",
     572,
@@ -29,11 +29,11 @@ values(
     "U-MAB 404"
 );
 
-insert into doctors(uid, first_name, last_name, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
+insert into doctors(first_name, last_name, root_specialization, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
 values(
-    uuid(),
     "Celine Antoinette Ng", 
     "Yapjuangco",
+    "Allergology",
     "Pediatrics",
     "Pediatric Allergology and Immunology",
     540,
@@ -44,11 +44,11 @@ values(
 
 
 -- Dermatology
-insert into doctors(uid, first_name, last_name, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
+insert into doctors(first_name, last_name, root_specialization, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
 values(
-    uuid(),
     "Ma. Carmela Abad", 
     "Tamayo",
+    "Dermatology",
     "Internal Medicine",
     "Dermatology",
     524,
@@ -57,11 +57,11 @@ values(
     "U-MAB 323"
 );
 
-insert into doctors(uid, first_name, last_name, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
+insert into doctors(first_name, last_name, root_specialization, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
 values(
-    uuid(),
     "Ma. Elena De Luna", 
     "Villacorta",
+    "Dermatology",
     "Internal Medicine",
     "Dermatology",
     524,
@@ -72,11 +72,11 @@ values(
 
 
 -- Gastroentology
-insert into doctors(uid, first_name, last_name, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
+insert into doctors(first_name, last_name, root_specialization, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
 values(
-    uuid(),
     "Gian Carlo Alvero", 
     "Carpio",
+    "Gastroenterology",
     "Internal Medicine",
     "Gastroenterology",
     521,
@@ -85,11 +85,11 @@ values(
     "U-MAB 310"
 );
 
-insert into doctors(uid, first_name, last_name, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
+insert into doctors(first_name, last_name, root_specialization, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
 values(
-    uuid(),
     "Maria Thea Mulingbayan", 
     "Nido",
+    "Gastroenterology",
     "Internal Medicine",
     "Gastroenterology",
     530,
@@ -100,11 +100,11 @@ values(
 
 
 -- Neurology
-insert into doctors(uid, first_name, last_name, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
+insert into doctors(first_name, last_name, root_specialization, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
 values(
-    uuid(),
     "Anthony Nacu", 
     "Piano",
+    "Neurology",
     "Neurology",
     "Neurology",
     571,
@@ -113,11 +113,11 @@ values(
     "U-MAB 427"
 );
 
-insert into doctors(uid, first_name, last_name, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
+insert into doctors(first_name, last_name, root_specialization, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
 values(
-    uuid(),
     "Aida Mendoza", 
     "Salonga",
+    "Neurology",
     "Neurology",
     "Adult Neurology",
     522,
@@ -128,11 +128,11 @@ values(
 
 
 -- Ophthalmology
-insert into doctors(uid, first_name, last_name, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
+insert into doctors(first_name, last_name, root_specialization, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
 values(
-    uuid(),
     "Jose Antonio", 
     "Paulino",
+    "Ophthalmology",
     "Adult Ophthalmology",
     "Strabismus",
     570,
@@ -141,11 +141,11 @@ values(
     "U-MAB 432"
 );
 
-insert into doctors(uid, first_name, last_name, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
+insert into doctors(first_name, last_name, root_specialization, primary_specialization, secondary_specialization, local_number, mobile_number, secretary, clinic_location)
 values(
-    uuid(),
     "Ana Marie", 
     "Santos",
+    "Ophthalmology",
     "Ophthalmology",
     "Cornea and External Eye Diseases",
     563,

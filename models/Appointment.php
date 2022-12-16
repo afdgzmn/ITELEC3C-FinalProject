@@ -1,7 +1,6 @@
 <?php
 
 class Appointment {
-    private $uid;
     private $user_id;
     private $schedule_id;
     private $date;
@@ -14,8 +13,7 @@ class Appointment {
     private $email;
     private $mobile_number;
 
-    function __construct($uid, $user_id, $schedule_id, $date, $is_first_visit, $status, $first_name, $last_name, $date_of_birth, $sex, $email, $mobile_number) {
-        $this->uid = $uid;
+    function __construct($user_id, $schedule_id, $date, $is_first_visit, $status, $first_name, $last_name, $date_of_birth, $sex, $email, $mobile_number) {
         $this->user_id = $user_id;
         $this->schedule_id = $schedule_id;
         $this->date = $date;
@@ -27,10 +25,6 @@ class Appointment {
         $this->sex = $sex;
         $this->email = $email;
         $this->mobile_number = $mobile_number;
-    }
-
-    function getUid() {
-        return $this->uid;
     }
 
     function getUserId() {

@@ -1,7 +1,7 @@
 create table appointments(
-    uid VARCHAR (255) NOT NULL,
-    user_id VARCHAR (255) NOT NULL,
-    schedule_id VARCHAR (255) NOT NULL,
+    uid INT NOT NULL AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    schedule_id INT NOT NULL,
     date DATE NOT NULL,
     is_first_visit BOOLEAN NOT NULL,
     status INT(1) NOT NULL,

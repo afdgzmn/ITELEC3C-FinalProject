@@ -1,6 +1,6 @@
 create table doctor_schedules(
-    uid VARCHAR (255) NOT NULL,
-    doctor_id VARCHAR (255) NOT NULL, 
+    uid INT NOT NULL AUTO_INCREMENT,
+    doctor_id INT NOT NULL, 
     day INT (1) NOT NULL, 
     start_time TIME NOT NULL, 
     end_time TIME NOT NULL, 
@@ -13,199 +13,179 @@ create table doctor_schedules(
 
 -- Allergology
 -- Agustin
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
 values(
-    uuid(),
     2,
+    1,
     "14:00:00",
-    "16:00:00",
-    "fc037cbf-77ad-11ed-bbe6-8c1645b43341"
+    "16:00:00"
 );
 
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
 values(
-    uuid(),
     6,
+    1,
     "14:00:00",
-    "16:00:00",
-    "fc037cbf-77ad-11ed-bbe6-8c1645b43341"
+    "16:00:00"
 );
 
 -- Yapjuangco
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
 values(
-    uuid(),
     3,
+    2,
     "11:00:00",
-    "14:00:00",
-    "fe3c678f-77ad-11ed-bbe6-8c1645b43341"
+    "14:00:00"
 );
 
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
 values(
-    uuid(),
     5,
+    2,
     "13:00:00",
-    "15:00:00",
-    "fe3c678f-77ad-11ed-bbe6-8c1645b43341"
+    "15:00:00"
 );
 
 
 -- Dermatology
 -- Tamayo
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
 values(
-    uuid(),
     1,
-    "15:00:00",
-    "17:00:00",
-    "008942fe-77ae-11ed-bbe6-8c1645b43341"
-);
-
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
-values(
-    uuid(),
     3,
     "15:00:00",
-    "17:00:00",
-    "008942fe-77ae-11ed-bbe6-8c1645b43341"
+    "17:00:00"
+);
+
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
+values(
+    3,
+    3,
+    "15:00:00",
+    "17:00:00"
 );
 
 -- Villacorta
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
 values(
-    uuid(),
+    4,
     4,
     "10:00:00",
-    "12:00:00",
-    "02f868e6-77ae-11ed-bbe6-8c1645b43341"
+    "12:00:00"
 );
 
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
 values(
-    uuid(),
     6,
+    4,
     "11:00:00",
-    "13:00:00",
-    "02f868e6-77ae-11ed-bbe6-8c1645b43341"
+    "13:00:00"
 );
 
 
 -- Gastroenterology
 -- Carpio
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
 values(
-    uuid(),
     2,
+    5,
     "09:00:00",
-    "11:00:00",
-    "0539dc69-77ae-11ed-bbe6-8c1645b43341"
+    "11:00:00"
 );
 
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
 values(
-    uuid(),
     4,
+    5,
     "09:00:00",
-    "11:00:00",
-    "0539dc69-77ae-11ed-bbe6-8c1645b43341"
+    "11:00:00"
 );
 
 -- Nido
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
 values(
-    uuid(),
     3,
-    "13:00:00",
-    "15:00:00",
-    "0732238d-77ae-11ed-bbe6-8c1645b43341"
-);
-
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
-values(
-    uuid(),
     6,
     "13:00:00",
-    "15:00:00",
-    "0732238d-77ae-11ed-bbe6-8c1645b43341"
+    "15:00:00"
+);
+
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
+values(
+    6,
+    6,
+    "13:00:00",
+    "15:00:00"
 );
 
 
 -- Neurology
 -- Piano
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
 values(
-    uuid(),
     1,
+    7,
     "15:00:00",
-    "17:00:00",
-    "097ab51c-77ae-11ed-bbe6-8c1645b43341"
+    "17:00:00"
 );
 
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
 values(
-    uuid(),
     6,
+    7,
     "15:00:00",
-    "17:00:00",
-    "097ab51c-77ae-11ed-bbe6-8c1645b43341"
+    "17:00:00"
 );
 
 -- Salonga
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
 values(
-    uuid(),
     3,
+    8,
     "13:00:00",
-    "17:00:00",
-    "db7ca5fb-77af-11ed-bbe6-8c1645b43341"
+    "17:00:00"
 );
 
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
 values(
-    uuid(),
     6,
+    8,
     "13:00:00",
-    "17:00:00",
-    "db7ca5fb-77af-11ed-bbe6-8c1645b43341"
+    "17:00:00"
 );
 
 
 -- Ophthalmology
 -- Paulino
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
 values(
-    uuid(),
     4,
+    9,
     "08:00:00",
-    "10:00:00",
-    "0d16b466-77ae-11ed-bbe6-8c1645b43341"
+    "10:00:00"
 );
 
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
 values(
-    uuid(),
     6,
+    9,
     "15:00:00",
-    "17:00:00",
-    "0d16b466-77ae-11ed-bbe6-8c1645b43341"
+    "17:00:00"
 );
 
 -- Santos
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
 values(
-    uuid(),
     2,
+    10,
     "09:00:00",
-    "12:00:00",
-    "0ee7db4d-77ae-11ed-bbe6-8c1645b43341"
+    "12:00:00"
 );
 
-insert into doctor_schedules(uid, day, start_time, end_time, doctor_id)
+insert into doctor_schedules(day, doctor_id, start_time, end_time)
 values(
-    uuid(),
     3,
+    10,
     "08:00:00",
-    "10:00:00",
-    "0ee7db4d-77ae-11ed-bbe6-8c1645b43341"
+    "10:00:00"
 );

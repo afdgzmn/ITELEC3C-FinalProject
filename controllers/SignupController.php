@@ -47,7 +47,6 @@ class SignupController extends Controller implements AuthInterface {
         $hashed_password = password_hash($password, PASSWORD_BCRYPT, $options);
 
         $user = new User(
-            uniqid(),
             $first_name, 
             $last_name,
             1,
@@ -87,7 +86,6 @@ class SignupController extends Controller implements AuthInterface {
     function registerUser(User $user) {
         $query = 
                 "INSERT INTO users(
-                    uid, 
                     first_name, 
                     last_name, 
                     user_type, 
@@ -95,7 +93,6 @@ class SignupController extends Controller implements AuthInterface {
                     password
                 ) 
                 VALUES(
-                    '{$user->getUid()}', 
                     '{$user->getFirstName()}', 
                     '{$user->getLastName()}', 
                     '{$user->getUserType()}', 
@@ -106,9 +103,25 @@ class SignupController extends Controller implements AuthInterface {
         $result = mysqli_query($this->getDatabase()->getConnection(), $query);
         if (!$result) {
             return array("Could not register user, please try again");
-        } 
+        }
+        
+        $result = $this->fetchUser($user->getEmail());
+        return $result;
+    }
 
-        $result = login($user->getUid(), $user->getUserType());
+    /**
+     * Fetch data after inserting data
+     */
+    function fetchUser($email) {
+        $query = "SELECT * FROM users WHERE email = '{$email}'";
+        $result = mysqli_query($this->getDatabase()->getConnection(), $query);
+
+        if (!$result) {
+            return array("Database error");
+        }
+
+        $row = mysqli_fetch_assoc($result);
+        $result = $this->login($row["uid"], $row["user_type"]);
         return $result;
     }
 
