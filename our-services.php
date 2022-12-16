@@ -157,15 +157,7 @@ session_start();
                     <h1 class="mb-4">Make An Appointment To Visit Our Doctor</h1>
                     <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
                     -->
-                    <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
-                            <i class="fa fa-search text-primary" style="font-size:30px"></i>
-                        </div>
-                        <div class="ms-4">
-                            <h5 class="mb-0">Search Doctor</h5>
-                            <p class="mb-2">Choose your doctor from thousands of specialist, general, and trusted hospitals.</p>
-                        </div>
-                    </div>
+                    
                     <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
                         <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
                             <i class="fa fa-prescription text-primary" style="font-size:30px"></i>
@@ -193,13 +185,13 @@ session_start();
                             <p class="mb-2">You can get 24/7 urgent care for yourself and your lovely family.</p>
                         </div>
                     </div>
-                    <div class="bg-light rounded d-flex align-items-center p-5">
+                    <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
                         <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
-                            <i class="fa fa-book-medical text-primary" style="font-size:30px"></i>
+                            <i class="fa fa-certificate text-primary" style="font-size:30px"></i>
                         </div>
                         <div class="ms-4">
-                            <h5 class="mb-0">Tracking</h5>
-                            <p class="mb-2">Track and save your medical history and health data.</p>
+                            <h5 class="mb-0">Medical Certificate</h5>
+                            <p class="mb-2">Given for fit to work, sick leave, or fit to travel.</p>
                         </div>
                     </div>
                 </div>
@@ -242,15 +234,7 @@ session_start();
                             <p class="mb-2">Requested to identify, treat, and/or prevent a medical condition.</p>
                         </div>
                     </div>
-                    <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
-                            <i class="fa fa-certificate text-primary" style="font-size:30px"></i>
-                        </div>
-                        <div class="ms-4">
-                            <h5 class="mb-0">Medical Certificate</h5>
-                            <p class="mb-2">Given for fit to work, sick leave, or fit to travel.</p>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>

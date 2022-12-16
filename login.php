@@ -77,7 +77,7 @@ if (isset($_POST['btn_login'])) {
 									<?php 
 										if (!empty($errors)) {
 											?>
-											<p class="error">
+											<p class="error" style="color: #FF0000">
 												<?php 
 													foreach ($errors as $error) {
 														echo $error;
@@ -90,12 +90,12 @@ if (isset($_POST['btn_login'])) {
 
 									<label class="label" for="name">Email</label>
 									<input type="text" class="form-control" id="email" name="email" required placeholder="Email">
-									<div id="email-check"></div>
+									<div id="email-check" style="color: #FF0000"></div>
 
 									<label class="label" for="name">Password</label>
 									<input type="password" class="form-control" id="password" name="password" required placeholder="Password">
 									<i class="fa fa-eye field-icon" id="toggle-password" style="cursor: pointer;"></i>
-									<div id="password-check"></div>
+									<div id="password-check" style="color: #FF0000"></div>
 								</div>
 
 								<div class="form-group">

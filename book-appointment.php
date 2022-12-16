@@ -205,13 +205,13 @@ if (isset($_POST['btn_book_appointment'])) {
                                 <div class="col-12 col-sm-6">
                                     <h5 style="text-align:left; margin-bottom:15px">First Name</h5>
                                     <input type="text" class="form-control border-0" style="height: 55px;" id="first-name" required placeholder="First Name" name="first_name">
-                                    <div style="text-align:left;" id="first-name-check"></div>
+                                    <div style="text-align:left; color: #FF0000;" id="first-name-check"></div>
                                 </div>
 
                                 <div class="col-12 col-sm-6">
                                     <h5 style="text-align:left; margin-bottom:15px">Last Name</h5>
                                     <input type="text" class="form-control border-0" style="height: 55px;" id="last-name" required placeholder="Last Name" name="last_name">
-                                    <div style="text-align:left;" id="last-name-check"></div>
+                                    <div style="text-align:left; color: #FF0000;" id="last-name-check"></div>
                                 </div>
 
                                 <div class="col-12 col-sm-6" style="margin-top:30px">
@@ -219,7 +219,7 @@ if (isset($_POST['btn_book_appointment'])) {
 
                                     <div class="date" id="date" data-target-input="nearest">
                                         <input type="date" class="form-control border-0 datetimepicker-input" style="height: 55px;" id="date-of-birth" required placeholder="Date of Birth" name="date_of_birth">
-                                        <div style="text-align:left;" id="date-of-birth-check"></div>
+                                        <div style="text-align:left; color: #FF0000;" id="date-of-birth-check"></div>
                                     </div>
                                 </div>
 
@@ -239,19 +239,19 @@ if (isset($_POST['btn_book_appointment'])) {
                                         <option value="true">Male</option>
                                         <option value="false">Female</option>
                                     </select>
-                                    <div style="text-align:left;" id="sex-check"></div>
+                                    <div style="text-align:left; color: #FF0000;" id="sex-check"></div>
                                 </div>
                                     
                                 <div class="col-12 col-sm-6" style="margin-top:30px">
                                     <h5 style="text-align:left; margin-bottom:15px">Email</h5>
                                     <input type="email" class="form-control border-0" style="height: 55px;" id="email" placeholder="Email" name="email">
-                                    <div style="text-align:left;" id="email-check"></div>
+                                    <div style="text-align:left; color: #FF0000;" id="email-check"></div>
                                 </div>
 
                                 <div class="col-12 col-sm-6" style="margin-top:30px">
                                     <h5 style="text-align:left; margin-bottom:15px">Mobile Number</h5>
                                     <input type="text" class="form-control border-0" style="height: 55px;" id="mobile-number" placeholder="Mobile Number" name="mobile_number">
-                                    <div style="text-align:left;" id="mobile-number-check"></div>
+                                    <div style="text-align:left; color: #FF0000;" id="mobile-number-check"></div>
                                 </div>
 
                                 <div class="col-12 col-sm-6" style="margin-top:30px"> 
@@ -291,7 +291,7 @@ if (isset($_POST['btn_book_appointment'])) {
                                         <input type="radio" style="margin-right:10px" name="is_first_visit" value="false">No
                                     </label>
 
-                                    <div style="text-align:left;" id="is-first-visit-check"></div>
+                                    <div style="text-align:left; color: #FF0000;" id="is-first-visit-check" ></div>
                                 </div>
 
                                 <div class="col-12 col-sm-6" style="margin-top:15px">
@@ -328,7 +328,7 @@ if (isset($_POST['btn_book_appointment'])) {
                                         ?>
                                     </select>
 
-                                    <div style="text-align:left;" id="schedule-check"></div>
+                                    <div style="text-align:left; color: #FF0000;" id="schedule-check"></div>
                                 </div>
                                     
                                 <div class="col-12" style="margin-top:30px">

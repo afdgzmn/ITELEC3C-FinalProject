@@ -91,25 +91,25 @@ if (isset($_POST['btn_signup'])) {
 
 									<label class="label" for="name">First Name</label>
 									<input type="text" class="form-control" id="first-name" name="first_name" required placeholder="First name">
-									<div id="first-name-check"></div>
+									<div id="first-name-check" style="color: #FF0000"></div>
 
 									<label class="label" for="name">Last Name</label>
 									<input type="text" class="form-control" id="last-name" name="last_name" required placeholder="Last name">
-									<div id="last-name-check"></div>
+									<div id="last-name-check" style="color: #FF0000"></div>
 
 									<label class="label" for="name">Email</label>
 									<input type="text" class="form-control" id="email" name="email" required placeholder="Email">
-									<div id="email-check"></div>
+									<div id="email-check" style="color: #FF0000"></div>
 
 									<label class="label" for="name">Password</label>
 									<input type="password" class="form-control" id="password" name="password" required placeholder="Password">
 									<i class="fa fa-eye field-icon" id="toggle-password" style="cursor: pointer;"></i>
-									<div id="password-check"></div>
+									<div id="password-check" style="color: #FF0000"></div>
 
 									<label class="label" for="name">Confirm Password</label>
 									<input type="password" class="form-control" id="confirm-password" name="confirm_password" required placeholder="Confirm Password">
 									<i class="fa fa-eye field-icon" id="toggle-confirm-password" style="cursor: pointer;"></i>
-									<div id="confirm-password-check"></div>
+									<div id="confirm-password-check" style="color: #FF0000"></div>
 								</div>
 
 								<div class="form-group">

@@ -1,3 +1,4 @@
+
 <?php
 
 require_once('models/User.php');
@@ -16,7 +17,7 @@ class LoginController extends Controller implements AuthInterface {
         $password = $this::sanitize($request["password"]);
 
         if (!preg_match($email_format, $email)) {
-            return array("Please enter a valid email");
+            return array("<font color = #FF0000>Please enter a valid email</font>");
         }
 
         $result = $this->validateCredentials($email, $password);

@@ -2,8 +2,8 @@
 
 class Database {
     private $DB_HOST = 'localhost';
-    private $DB_USERNAME = 'itelec';
-    private $DB_PASSWORD = 'mysql';
+    private $DB_USERNAME = 'root';
+    private $DB_PASSWORD = '';
     private $DB_DATABASE = 'wecare';
     private $connection;
 

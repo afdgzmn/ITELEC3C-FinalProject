@@ -244,10 +244,10 @@ session_start();
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item bg-light rounded h-100 p-5">
                         <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
-                            <i class="fa fa-search text-primary fs-4"></i>
+                            <i class="fa fa-certificate text-primary fs-4"></i>
                         </div>
-                        <h4 class="mb-3">Search Doctor</h4>
-                        <p class="mb-4">Choose your doctor from thousands of specialist, general, and trusted hospitals.</p>
+                        <h4 class="mb-3">Medical Certificate</h4>
+                        <p class="mb-4">Given for fit to work, sick leave, or fit to travel.</p>
                         <!--<a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>-->
                     </div>
                 </div>
