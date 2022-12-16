@@ -58,7 +58,7 @@ class LoginController extends Controller implements AuthInterface {
     function login($uid, $user_type) {
         $_SESSION["uid"] = $uid;
         $_SESSION["user_type"] = $user_type;
-        if ($usertype == 0) {
+        if ($user_type == 0) {
             return header("location: admin-dashboard.php");
         }
 
