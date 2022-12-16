@@ -16,7 +16,7 @@ class Controller {
 
     static function dd($data) {
         var_dump($data);
-        die;
+        die();
     }
 
     /**
