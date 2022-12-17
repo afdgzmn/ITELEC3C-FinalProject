@@ -135,12 +135,12 @@ class BookAppointmentController extends Controller implements DoctorsInterface {
             $_SESSION["uid"],
             $schedule_id,
             $date,
-            json_decode($is_first_visit),
+            ($is_first_visit == "true") ? 1 : 0,
             0,
             $first_name,
             $last_name,
             $date_of_birth,
-            json_decode($sex),
+            ($sex == "true") ? 1 : 0,
             $email,
             $mobile_number
         );
@@ -194,7 +194,7 @@ class BookAppointmentController extends Controller implements DoctorsInterface {
                 '{$appointment->getScheduleId()}',
                 '{$appointment->getDate()}',
                 '{$appointment->getIsFirstVisit()}',
-                0,
+                '{$appointment->getStatus()}',
                 '{$appointment->getFirstName()}', 
                 '{$appointment->getLastName()}', 
                 '{$appointment->getDateOfBirth()}', 
